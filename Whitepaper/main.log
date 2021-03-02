@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.1)  1 MAR 2021 22:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.1)  1 MAR 2021 23:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -346,7 +346,13 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (c:/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-)) (d:/Workspace/CSCI-699-JHE/Whitepaper/sections/abstract.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/introduction.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/questions.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/related_works.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/commit_types.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/commit_messages.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/code_patterns.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/main.bbl)
+)) (d:/Workspace/CSCI-699-JHE/Whitepaper/sections/abstract.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/introduction.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/questions.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/related_works.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/commit_types.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/commit_messages.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/code_patterns.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/conclusions.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/main.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -358,23 +364,22 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[1{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
+[2
 
 ] (d:/Workspace/CSCI-699-JHE/Whitepaper/main.aux) ) 
 Here is how much of TeX's memory you used:
- 4598 strings out of 479023
- 69031 string characters out of 5863351
- 549036 words of memory out of 5000000
- 21997 multiletter control sequences out of 15000+600000
+ 4602 strings out of 479023
+ 69194 string characters out of 5863351
+ 550036 words of memory out of 5000000
+ 21998 multiletter control sequences out of 15000+600000
  504665 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,8n,75p,1029b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on d:/Workspace/CSCI-699-JHE/Whitepaper/main.pdf (1 page, 53497 bytes).
+Output written on d:/Workspace/CSCI-699-JHE/Whitepaper/main.pdf (2 pages, 60218 bytes).
 PDF statistics:
- 25 PDF objects out of 1000 (max. 8388607)
- 17 compressed objects within 1 object stream
+ 28 PDF objects out of 1000 (max. 8388607)
+ 19 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
