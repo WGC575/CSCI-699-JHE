@@ -1,15 +1,47 @@
-\documentclass[a4paper,12pt]{article}
-\usepackage[utf8]{inputenc}
+% !TeX root = ./main.tex
+\documentclass[10pt,conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
 \usepackage{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.eps}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
 
-\title{White Paper for Categorizational Study on Characteristics of Developer Behaviors}
-\author{Jincheng He, 6792671766, jinchenh@usc.edu}
-
+\usepackage{xspace}
+%new packages from Pooyan's dissertation start
+\usepackage{multicol,lipsum}
+\usepackage{multirow}
+%new packages from Pooyan's dissertation end
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
 \begin{document}
+
+\title{To be Defined}
+
+\author{
+\IEEEauthorblockN{Jincheng He}
+\IEEEauthorblockA{\textit{Department of Computer Science} \\
+\textit{University of Southern California}\\
+%City, Country \\
+jinchenh@usc.edu}
+}
+
 \maketitle
 
-\input{./sections/abstract.tex}
+\begin{abstract}
+\input{sections/abstract.tex}
+\end{abstract}
+
+\begin{IEEEkeywords}
+Software Engineering, Software Maintenance, Software Quality, Open Source Software
+\end{IEEEkeywords}
+
+
 \input{./sections/introduction.tex}
 \input{./sections/questions.tex}
 \input{./sections/related_works.tex}
@@ -17,10 +49,14 @@
 \input{./sections/commit_messages.tex}
 \input{./sections/code_patterns.tex}
 
-%sections to be defined
-%\section{Other Aspects from Meta-data}
-%\section{A Sentimental View of Developer Behaviors}
 
-\input{./sections/conclusions.tex}
+\medskip
+\bibliographystyle{./bibliography/IEEEtran}
+\bibliography{./bibliography/IEEEabrv,./bibliography/IEEEexample,./bibliography/references}
+
+\vspace{12pt}
+\color{red}
+%IEEE conference templates contain guidance text for composing and formatting conference papers. Please ensure that all template text is removed from your conference paper prior to submission to the conference. Failure to remove the template text from your paper may result in your paper not being published.
+
 
 \end{document}
