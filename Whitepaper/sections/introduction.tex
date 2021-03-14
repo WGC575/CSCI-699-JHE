@@ -1,15 +1,50 @@
 \section{Introduction}
+Most industry-scale software are developed under iterative contributions from the project teams \cite{}, through ICSM, Agile, DevOps or other process models. 
+In the iterations, version control systems, such as Git and SVN, play a critical role by enabling and facilitate the concurrent contributions from developers.
+Each revision, or commitment (referred as ``commit'' in the rest of the paper) contains diffs which are the lines developers change.
+These changes 
+
+%%%%%%%%%%%%
+Industry-scale software evolves through thousands of iterative code changes. Version control systems, such as Git and SVN, allow these changes to take place in parallel, with multiple developers contributing to a shared repository. Each contribution is captured in a commit -- a collection of file diffs that indicate modified code.
+%One aspect of software evolution is commit purpose \cite{Hindle}.
+Developers author commits for different purposes.
+For example, a commit can edit the build configuration, fix a bug, or refactor existing code.
+It is common practice for developers to author atomic commits \footnote{https://www.freshconsulting.com/atomic-commits/} that have a singular purpose. However, refactoring, added dependencies, minor fixes, and scope creep can cause the commit to grow beyond its intended task. Each commit includes a prescriptive message documenting the changes made \footnote{https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project}, in practice with varying degrees of efficacy. 
+
+A software revision created by a commit is expected to be compilable. However, uncompilability can occur due to careless development -- failure to compile the software locally prior to pushing to the shared repository. It can also result from variations in build environments, incompatibility across overlapping changes made by multiple developers, or changes in upstream dependencies. 
+The presence of compile errors inhibits bytecode and dynamic software analysis, as well as static analysis when the code is unparsable \cite{Behnamghader_ESEM}.
+Previous studies \cite{Behnamghader_ESEM, 8170083, Hassan2017ESEM, SMR:SMR1838} have shown that even in popular open-source projects maintained by major software organizations, build-breaking commits can occur.
+
+Behnamghader et al.\cite{Behnamghader_QRS} explore the qualitative properties of uncompilable commits.
+Further insight into the types of commits that most frequently cause build errors can help to inform better development practices. Additionally, this correlation can be used as a part of future methods for predicting and preventing uncompilable commits. 
+Analyzing the degradation of software quality over multiple uncompilable commits highlights the long-term negative impact of careless development, and the importance of fixing build errors immediately after they take place.
+Also, understanding the purposes of those uncompilable commits can result in preparing guidelines to avoid such degradation in the future.
+
+Previous research has produced taxonomies for commit categorization \cite{Hindle_cate,Alali,Dragan,Swanson, Mauczka, Hindle_auto}. While sharing some common category terminologies and definitions, these taxonomies cannot be directly adopted for understanding the purposes of commits.
+The taxonomies that integrate commit purpose have only been adapted to large commits \cite{Hindle_cate,Hindle_auto} which lack the specificity to classify smaller code changes \cite{Swanson}.
+%Thus, we start with the commit purpose taxonomy from Hindle et al. \cite{Hindle_cate}, refine, standardize, and expand it to make it applicable for small commits. 
+%However, other studies \cite{x} report that 75\% of software development budgets are dedicated to maintenance.
+
+In this paper, we analyze the differences in software quality metrics before and after sequences of uncompilable commits and compare them with the compilable sequences to study whether software quality changes differently over uncompilable periods. To gain a deeper insight into this, we explore the relation between commit size, purpose and uncompilability.
+We employ the commit purpose taxonomy from Hindle et al. \cite{Hindle_cate}, refine, standardize, and expand it to make it applicable for small commits. 
+Our goal is to further understanding of the causes and effects of uncompilability in open-source systems, a significant problem that resists explanation by common software quality analysis tools. This work consists of the following contributions: 
+\begin{itemize}
+    \item A methodology for assessing software quality over sequences of uncompilable commits.
+    \item Findings on the evolution of software quality over sequences of uncompilable commits.
+    \item A definition for ``independent changes'' to help categorize commits.
+    \item A taxonomy for categorizing commit purpose that can be used across commits of varying size.
+    \item A dataset of 914 commits tagged using this taxonomy.
+    \item Findings on the relationship between commit size and purpose.
+    \item Findings on the incidence of commit purpose over uncompilable commits.  
+\end{itemize}
+
+The remainder of the paper is organized as follows.
+Section \ref{sec:related-work} summarizes the related works that analyze compilability over commit history and the related works that categorize commits based on commit purpose. 
+Section \ref{sec:research-questions} discusses our research questions.
+Section \ref{sec:data-collection} discusses our data collection process.
+Section \ref{sec:approach} discusses our approach with regard to refining an existing taxonomy, to dealing with inconsistencies and ambiguities in the tagging process, and to studying software quality evolution over uncompilable periods. 
+Section \ref{sec:results} discusses the results of our analysis with respect to the research questions.
+Section \ref{sec:threats-to-validity} focuses on the threats to validity of our analysis and Section \ref{sec:conclusions} concludes the paper.
 
 
-This direction mainly focuses on investigating the developer behaviors including how they contribute to the software project, especially to open source software where we can get enough metadata for analysis to evaluate how different behaviors impact the software quality and how to improve this process for the sake of better software quality. Specifically, this research will focus on modelling the change pattern in code when contributors make the commits and how the code impacts the quality metrics. In this direction, research has been conducted to investigate when, where, how and what the developers contribute to the projects but there is still space for research from the coding side. To reveal details, for example, the change types and contents, in code level can reveal further detail how different changes related to developer behaviors and how they impact the software quality, which is represented in the software quality metrics.
 
-This direction could succeed since the current techniques in machine learning, statistics, natural language processing will be sufficient to support this research. Once it succeeds, we can provide further instructions in coding, if possible, more reliable coding standards which can lead to an improvement and standardization of coding in the software engineering area.
-
-This direction may take more than ten years since it could be a gradual improvement. The success of this direction depends on how the applied techniques evolve in the coming years. The midterm milestone could be a reasonable high prediction accuracy while the final exam milestone could be the completion of the new systematic coding standards.
-
-
-Research has been done to investigate the impact of some behaviors of developers when they contribute to software, especially open source software. However, in the previous research in this area, they haven't reveal the correlation between the change type and the code as well as their impact on the software quality. In this research, we start with categorization of commit changes in open source software repositories and show their impact on the software quality, collected by using different static analysis tools, by which we get software metrics for each revision of the software. In the end of this paper, we propose a new categorization for the commit change, based on reading the code and the commit message. We also apply neural network to train a model to predict the potential software quality changes after a certain kind of change with an accuracy of 90%.
-
-In previous research, we have been proven there exist correlation between the change type and the software quality, which is represented by the software quality metrics. However, this is not enough to put this research into valuable application. In this research, we refine the categorization by applying a natural language processing approach to the code to parse it. In this way, we can model the change into a lower level, and make more accurate prediction of what is happening in the repository of the open source software. The results shows we can predict the change of software quality change based on the code with a high accuracy of 95%.
-
-In previous research, the researchers use natural language processing methods to predict the possible changes to the software quality based on the code changes. This means we can provide guidelines to some extent for software contributors when they commit to a software. However, the previous study mainly focus on training the model with current data which has its limitation. In this research, we collect new data from different software repositories with more than 100 coding styles, including most of existing coding styles. By comparing the different coding styles and training the new prediction model, we come up with a guideline for how to code more efficiently with less software quality issues. The results turn out to be valuable, providing a 95% of prediction accuracy and a improvement of 15% software quality metrics.
