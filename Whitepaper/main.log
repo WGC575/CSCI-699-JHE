@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.1)  15 MAR 2021 00:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.1)  15 MAR 2021 15:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -361,15 +361,18 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <figures/terminology.pdf, id=10, 722.7pt x 542.025pt>
 File: figures/terminology.pdf Graphic file (type pdf)
 <use figures/terminology.pdf>
-Package pdftex.def Info: figures/terminology.pdf  used on input line 9.
+Package pdftex.def Info: figures/terminology.pdf  used on input line 12.
 (pdftex.def)             Requested size: 216.81166pt x 162.60875pt.
  [2]
 <figures/sequence.pdf, id=15, 722.7pt x 361.35pt>
 File: figures/sequence.pdf Graphic file (type pdf)
 <use figures/sequence.pdf>
-Package pdftex.def Info: figures/sequence.pdf  used on input line 23.
+Package pdftex.def Info: figures/sequence.pdf  used on input line 30.
 (pdftex.def)             Requested size: 216.81166pt x 108.40584pt.
-) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/type.tex [3 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/terminology.pdf> <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/sequence.pdf>]
+) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/type.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/terminology.pdf> <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/sequence.pdf>]
 Underfull \hbox (badness 7704) in paragraph at lines 28--28
 []\T1/ptm/m/n/8 One or more bug
  []
@@ -468,15 +471,16 @@ File: figures/num_tasks_break_rate.pdf Graphic file (type pdf)
 <use figures/num_tasks_break_rate.pdf>
 Package pdftex.def Info: figures/num_tasks_break_rate.pdf  used on input line 274.
 (pdftex.def)             Requested size: 520.34802pt x 260.17401pt.
-<figures/commit_size.pdf, id=72, 1011.78pt x 433.62pt>
+
+Underfull \vbox (badness 1189) has occurred while \output is active []
+
+ [6]
+<figures/commit_size.pdf, id=75, 1011.78pt x 433.62pt>
 File: figures/commit_size.pdf Graphic file (type pdf)
 <use figures/commit_size.pdf>
 Package pdftex.def Info: figures/commit_size.pdf  used on input line 294.
 (pdftex.def)             Requested size: 505.88876pt x 216.80946pt.
 ) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/message.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/pattern.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/quality.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6]
 
 LaTeX Warning: Citation `Behnamghader_ESEM' on page 7 undefined on input line 26.
 
@@ -489,13 +493,7 @@ LaTeX Warning: Citation `Behnamghader_QRS' on page 7 undefined on input line 33.
 
 LaTeX Warning: Citation `Behnamghader_ESEM' on page 7 undefined on input line 33.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/cat_distribution_over_s&m_commits.pdf>]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/goal.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/conclusions.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/breaker_neutral.pdf>]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/acknowledge.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/main.bbl [9 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/num_tasks_break_rate.pdf>]
+[7 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/cat_distribution_over_s&m_commits.pdf>]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/goal.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/conclusions.tex [8 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/breaker_neutral.pdf>]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/acknowledge.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/main.bbl [9 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/num_tasks_break_rate.pdf>]
 Underfull \hbox (badness 1552) in paragraph at lines 142--146
 []\T1/ptm/m/n/8 C. Ma-cho, S. McIn-tosh, and M. Pinzger, ``Au-to-mat-i-cally re-pair-
  []
@@ -528,7 +526,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  71i,10n,75p,1028b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on d:/Workspace/CSCI-699-JHE/Whitepaper/main.pdf (10 pages, 273090 bytes).
+Output written on d:/Workspace/CSCI-699-JHE/Whitepaper/main.pdf (10 pages, 273451 bytes).
 PDF statistics:
  254 PDF objects out of 1000 (max. 8388607)
  100 compressed objects within 1 object stream
