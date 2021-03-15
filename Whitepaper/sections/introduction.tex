@@ -1,21 +1,49 @@
 \section{Introduction}
-Most industry-scale software are developed under iterative contributions from the project teams \cite{}, through ICSM, Agile, DevOps or other process models. 
+\subsection{Open Source Software and Version Control System}
+It has been a long time since developing software in an open source repository became a common way of developing software. 
+In those project, some of them are of industrial scale.
+As the scale has grown far beyond the level that an individual can control and manage, how to efficiently conduct quality control and project management is one of the critical issue in open source software development.
+
+Most industry-scale software are developed by iterative contributions from the project teams \cite{}, through ICSM, Agile, DevOps or other process models. 
 In the iterations, version control systems, such as Git and SVN, play a critical role by enabling and facilitate the concurrent contributions from developers.
 Each revision, or commitment (referred as ``commit'' in the rest of the paper) contains diffs which are the lines developers change.
-These changes 
 
+These changes can be made by developers from different area of the world, at different times, with different purposes and have different level of impacts on the software \cite{qrs2020}, correspondingly having negative or positive impact on the software quality. 
+Thus, it is necessary to investigate how these differences influence the software quality to understand it and control it better during the development and maintenance phases. 
+
+Focusing on the different purposes of commits, this research white paper investigate how different types of commits, with respect to their purposes, impact the software quality and propose what we can do to control it. 
+
+\subsection{Level of Commit Impacts}
+In all commits to a project, some commits can be less while others being more impactful on the project and software quality.
+Some projects have multiple modules, one of which is core modules while others are less critical to the entire project. 
+Moreover, some commits many contains only a few documentation fixes while others do hundreds of lines of modifications.
+These commits in this situation can have different level of impact on the entire project.
+
+The level of impact can be defined in various ways to specify what to investigate. For example, in some previous study, researchers defined impactful commits by whether they are in the core module \cite{pooyan_esem, pooyan_qrs}.
+We believe that the more critical are the commits, the earlier they should be taken care of, in the sense of quality control and management. 
+
+\subsection{Purposes of Commits}
+While the level of impact can be different, the type of commits can also be different.
+For example, some commits add a few lines of documentation or comments to code while others can refactoring the code structure or made module-level modifications.
+
+It is common for developers to upload single-purpose commits\footnote{https://www.freshconsulting.com/atomic-commits/}. 
+However, in commits where changes such as refactoring, adding new dependencies, minor fixing happen, the commits tend to grow beyond its intended task. 
+Each commit includes a prescriptive message documenting the changes made\footnote{https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project}, in practice with varying degrees of efficacy. 
+
+In addition, it has been shown that different types, by purpose, of commits have impact on one aspect of the software quality, which is compilability\cite{qrs2020}.
+Thus, it is worth working on to investigate how different types of commits impact other aspects of software quality and how they are related to the other metadata of software to acquire a new series guidelines by which developers can following to help improve the overall software quality.
+
+\subsection{Commit Message}
+One critical piece of the project metadata is the commit message. 
+When developers push some change to the online repository, a commit message is usually required to explain what they have change in the commit they want to push.
+
+These messages are important clues for understanding the purposes, thus the types of those commit.
 %%%%%%%%%%%%
-Industry-scale software evolves through thousands of iterative code changes. Version control systems, such as Git and SVN, allow these changes to take place in parallel, with multiple developers contributing to a shared repository. Each contribution is captured in a commit -- a collection of file diffs that indicate modified code.
-%One aspect of software evolution is commit purpose \cite{Hindle}.
-Developers author commits for different purposes.
-For example, a commit can edit the build configuration, fix a bug, or refactor existing code.
-It is common practice for developers to author atomic commits \footnote{https://www.freshconsulting.com/atomic-commits/} that have a singular purpose. However, refactoring, added dependencies, minor fixes, and scope creep can cause the commit to grow beyond its intended task. Each commit includes a prescriptive message documenting the changes made \footnote{https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project}, in practice with varying degrees of efficacy. 
-
 A software revision created by a commit is expected to be compilable. However, uncompilability can occur due to careless development -- failure to compile the software locally prior to pushing to the shared repository. It can also result from variations in build environments, incompatibility across overlapping changes made by multiple developers, or changes in upstream dependencies. 
-The presence of compile errors inhibits bytecode and dynamic software analysis, as well as static analysis when the code is unparsable \cite{Behnamghader_ESEM}.
-Previous studies \cite{Behnamghader_ESEM, 8170083, Hassan2017ESEM, SMR:SMR1838} have shown that even in popular open-source projects maintained by major software organizations, build-breaking commits can occur.
+The presence of compile errors inhibits bytecode and dynamic software analysis, as well as static analysis when the code is unparsable \cite{pooyan_esem}.
+Previous studies \cite{pooyan_esem, 8170083, Hassan2017ESEM, SMR:SMR1838} have shown that even in popular open-source projects maintained by major software organizations, build-breaking commits can occur.
 
-Behnamghader et al.\cite{Behnamghader_QRS} explore the qualitative properties of uncompilable commits.
+Behnamghader et al.\cite{pooyan_qrs} explore the qualitative properties of uncompilable commits.
 Further insight into the types of commits that most frequently cause build errors can help to inform better development practices. Additionally, this correlation can be used as a part of future methods for predicting and preventing uncompilable commits. 
 Analyzing the degradation of software quality over multiple uncompilable commits highlights the long-term negative impact of careless development, and the importance of fixing build errors immediately after they take place.
 Also, understanding the purposes of those uncompilable commits can result in preparing guidelines to avoid such degradation in the future.
@@ -39,12 +67,11 @@ Our goal is to further understanding of the causes and effects of uncompilabilit
 \end{itemize}
 
 The remainder of the paper is organized as follows.
-Section \ref{sec:related-work} summarizes the related works that analyze compilability over commit history and the related works that categorize commits based on commit purpose. 
-Section \ref{sec:research-questions} discusses our research questions.
-Section \ref{sec:data-collection} discusses our data collection process.
-Section \ref{sec:approach} discusses our approach with regard to refining an existing taxonomy, to dealing with inconsistencies and ambiguities in the tagging process, and to studying software quality evolution over uncompilable periods. 
-Section \ref{sec:results} discusses the results of our analysis with respect to the research questions.
-Section \ref{sec:threats-to-validity} focuses on the threats to validity of our analysis and Section \ref{sec:conclusions} concludes the paper.
+Section \ref{sec:type} discusses previous works in categorizing commits, either by their purposes, sizes and other criteria and how we 
+Section \ref{sec:message} discusses previous works in analyzing, extracting information, and auto-generation of commit messages (some more sub-directions can be added here) and how we can use commit message to help categorization and analyzing quality metrics.
+Section \ref{sec:pattern} discusses our data collection process.
+Section \ref{sec:quality} discusses our approach with regard to refining an existing taxonomy, to dealing with inconsistencies and ambiguities in the tagging process, and to studying software quality evolution over uncompilable periods. 
+Section \ref{sec:conclusion} concludes the paper.
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.1)  14 MAR 2021 00:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.1)  14 MAR 2021 19:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -347,39 +347,136 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (c:/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) (d:/Workspace/CSCI-699-JHE/Whitepaper/sections/abstract.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/introduction.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 12.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
  (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 12.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
  (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-
-LaTeX Warning: Reference `sec:related-work' on page 2 undefined on input line 42.
-
-
-LaTeX Warning: Reference `sec:research-questions' on page 2 undefined on input line 43.
+Underfull \vbox (badness 1033) has occurred while \output is active []
 
 
-LaTeX Warning: Reference `sec:data-collection' on page 2 undefined on input line 44.
+
+LaTeX Warning: Reference `sec:quality' on page 2 undefined on input line 73.
+
+) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/data.tex
+<figures/terminology.pdf, id=10, 722.7pt x 542.025pt>
+File: figures/terminology.pdf Graphic file (type pdf)
+<use figures/terminology.pdf>
+Package pdftex.def Info: figures/terminology.pdf  used on input line 10.
+(pdftex.def)             Requested size: 216.81166pt x 162.60875pt.
+ [2 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/terminology.pdf>]
+<figures/sequence.pdf, id=26, 722.7pt x 361.35pt>
+File: figures/sequence.pdf Graphic file (type pdf)
+<use figures/sequence.pdf>
+Package pdftex.def Info: figures/sequence.pdf  used on input line 24.
+(pdftex.def)             Requested size: 216.81166pt x 108.40584pt.
+) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/commit_types.tex
+Underfull \hbox (badness 7704) in paragraph at lines 13--13
+[]\T1/ptm/m/n/8 One or more bug
+ []
 
 
-LaTeX Warning: Reference `sec:approach' on page 2 undefined on input line 45.
+Overfull \hbox (1.32753pt too wide) in paragraph at lines 27--27
+[]\T1/ptm/m/n/8 Documentation| 
+ []
 
 
-LaTeX Warning: Reference `sec:results' on page 2 undefined on input line 46.
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]\T1/ptm/m/n/8 An ad-di-
+ []
 
 
-LaTeX Warning: Reference `sec:threats-to-validity' on page 2 undefined on input line 47.
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\T1/ptm/m/n/8 tion/implementation
+ []
 
 
-LaTeX Warning: Reference `sec:conclusions' on page 2 undefined on input line 47.
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]\T1/ptm/m/n/8 New func-tion/methods/class
+ []
 
-) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/commit_types.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/quality.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/commit_messages.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/code_patterns.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/conclusions.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/acknowledge.tex [2]) (d:/Workspace/CSCI-699-JHE/Whitepaper/main.bbl)
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\T1/ptm/m/n/8 im-ple-mented, im-pact-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]\T1/ptm/m/n/8 Internationa-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]\T1/ptm/m/n/8 Source
+ []
+
+
+Underfull \hbox (badness 1389) in paragraph at lines 41--41
+[]\T1/ptm/m/n/8 A com-mit that per-
+ []
+
+
+Underfull \hbox (badness 2318) in paragraph at lines 41--41
+\T1/ptm/m/n/8 mon dur-ing main-te-
+ []
+
+
+Underfull \hbox (badness 7133) in paragraph at lines 41--41
+[]\T1/ptm/m/n/8 Functional changes with-out
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+[]\T1/ptm/m/n/8 Module
+ []
+
+
+Underfull \hbox (badness 5050) in paragraph at lines 53--53
+[]\T1/ptm/m/n/8 Refactoring of por-
+ []
+
+
+Underfull \hbox (badness 2635) in paragraph at lines 53--53
+\T1/ptm/m/n/8 tions of the source
+ []
+
+
+Overfull \hbox (4.0pt too wide) in paragraph at lines 7--66
+ [][][] 
+ []
+
+[3 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/sequence.pdf>]
+
+LaTeX Warning: Reference `fig:cross_validation' on page 4 undefined on input line 94.
+
+) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/independent.tex
+
+pdfTeX warning: pdflatex.exe (file d:/Workspace/CSCI-699-JHE/Whitepaper/figures/independent_change.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<figures/independent_change.pdf, id=52, 542.025pt x 650.43pt>
+File: figures/independent_change.pdf Graphic file (type pdf)
+<use figures/independent_change.pdf>
+Package pdftex.def Info: figures/independent_change.pdf  used on input line 4.
+(pdftex.def)             Requested size: 271.01183pt x 325.2142pt.
+) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/multitag.tex [4]
+<figures/cat_distribution_over_s&m_commits.pdf, id=56, 1806.75pt x 867.24pt>
+File: figures/cat_distribution_over_s&m_commits.pdf Graphic file (type pdf)
+<use figures/cat_distribution_over_s&m_commits.pdf>
+Package pdftex.def Info: figures/cat_distribution_over_s&m_commits.pdf  used on input line 14.
+(pdftex.def)             Requested size: 542.02919pt x 260.17401pt.
+) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/quality.tex
+
+LaTeX Warning: Citation `Behnamghader_ESEM' on page 5 undefined on input line 8.
+
+) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/commit_messages.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/code_patterns.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/conclusions.tex [5 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/independent_change.pdf>]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/acknowledge.tex
+Underfull \vbox (badness 4913) has occurred while \output is active []
+
+) (d:/Workspace/CSCI-699-JHE/Whitepaper/main.bbl [6 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/cat_distribution_over_s&m_commits.pdf>])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -391,7 +488,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[3
+[7
 
 ] (d:/Workspace/CSCI-699-JHE/Whitepaper/main.aux)
 
@@ -399,18 +496,18 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4671 strings out of 479023
- 70100 string characters out of 5863351
- 552036 words of memory out of 5000000
- 22044 multiletter control sequences out of 15000+600000
- 514371 words of font info for 140 fonts, out of 8000000 for 9000
+ 4722 strings out of 479023
+ 71600 string characters out of 5863351
+ 567036 words of memory out of 5000000
+ 22080 multiletter control sequences out of 15000+600000
+ 519587 words of font info for 142 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,8n,75p,1028b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,10n,75p,1028b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on d:/Workspace/CSCI-699-JHE/Whitepaper/main.pdf (3 pages, 78237 bytes).
+Output written on d:/Workspace/CSCI-699-JHE/Whitepaper/main.pdf (7 pages, 194541 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 150 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
