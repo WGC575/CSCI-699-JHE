@@ -1,7 +1,6 @@
 \section{Data}
+\subsection{Current Data Set}
 \label{sec:data}
-\section{Data Collection}
-\label{sec:data-collection}
 
 Samples are filtered from the dataset introduced in our previous studies \cite{pooyan_esem}, \cite{pooyan_qrs}, which provides compilability and software quality metrics across 68 open-source Java projects owned by Apache, Google, and Netflix. 
 This study is performed on 914 commits, 314 uncompilable and 600 compilable.
@@ -50,3 +49,6 @@ The resulting threshold -- 184 lines of code -- is used to label the 600 compila
 This threshold is based on the distribution of uncompilable commits in order to motivate discussions on the relative sizes and categorization of uncompilable commits. The final dataset contains 157 each of large and small uncompilable commits, and 138 \& 462 large and small compilable commits, resp.
 
 To analyze software quality evolution over uncompilable commits in relation to the quality of compilable commits, we examine metrics on code complexity, maintainability, and security, provided by SonarQube \footnote{https://www.sonarqube.org/} and PMD \footnote{https://pmd.github.io/}. As uncompilable commits cannot be directly assessed by dynamic software quality analysis, we measure the overall quality change in the compilable commits before and after uncompilable sequences, extrapolating to determine the individual quality of each commit. 
+
+
+\subsection{Additional Data to be Collected}

@@ -16,8 +16,13 @@
 \usepackage{multicol,lipsum}
 \usepackage{multirow}
 
+%Additional Definitions and Command Start
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\definecolor{comment}{RGB}{0, 127, 0}
+\newcommand{\comment}[1]{{\leavevmode\color{comment}[TODO: #1]}\xspace}
+
+%Additional Definitions and Command End
 
 \begin{document}
 
@@ -41,18 +46,15 @@ jinchenh@usc.edu}
 Software Engineering, Software Maintenance, Software Quality, Open Source Software
 \end{IEEEkeywords}
 
-
 \input{./sections/introduction.tex}
 \input{./sections/data.tex}
-\input{./sections/commit_types.tex}
-\input{./sections/independent.tex}
-\input{./sections/multitag.tex}
+\input{./sections/type.tex}
+\input{./sections/message.tex}
+\input{./sections/pattern.tex}
 \input{./sections/quality.tex}
-\input{./sections/commit_messages.tex}
-\input{./sections/code_patterns.tex}
+\input{./sections/goal.tex}
 \input{./sections/conclusions.tex}
 \input{./sections/acknowledge.tex}
-
 
 \medskip
 \bibliographystyle{./bibliography/IEEEtran}
