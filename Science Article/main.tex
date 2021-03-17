@@ -16,12 +16,18 @@
 \usepackage{multicol,lipsum}
 \usepackage{multirow}
 %new packages from Pooyan's dissertation end
+
+%Additional Definitions and Command Start
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\definecolor{comment}{RGB}{0, 127, 0}
+\newcommand{\comment}[1]{{\leavevmode\color{comment}[TODO: #1]}\xspace}
+
+%Additional Definitions and Command End
 
 \begin{document}
 
-\title{To be Defined}
+\title{Further Investigations on Developer Contributions, Higher Software Quality}
 
 \author{
 \IEEEauthorblockN{Jincheng He}
@@ -34,13 +40,44 @@ jinchenh@usc.edu}
 
 \maketitle
 
-\section{Introduction}
+\section{Software is Everywhere}
 
-\section{Software}
+Software has been everywhere in the daily life since they made their way out of the lab since the last quarter of the 20-th century although sometimes people may not recognize them.
+Simple examples can be those in the daily digital devices, such as PC, smartphones and tablets. 
 
-\section{Software Quality}
+Some embedded software are less recognizable. 
+The government, bank system, traffic, which are in the social level, and washing machine, instant pot, which are in the individual level, are also controlled under the help of software.
 
-\section{Benefits}
+\section{Open-Source Software}
+As software has become common in life, the way of how software developers collaborate with each other also varies in the past decades.
+Some software stay close-source which allow them to keep the development details secret while others open the development repositories, which are visible to everyone and allow contributions from outside the original developing groups.
+
+These days, open-source software has become a popular way to develop software. Even large corporations conduct open-source development constantly.
+For example, Google, Netflix and Apache all have their own open-source software projects, on which developers from all over the world collaborate remotely. \comment{Add footnotes here.}
+
+\section{Software Quality and Metrics}
+
+One of the difficulties of developing open-source software is maintaining the quality. 
+As developers are from different time zones, with different skills and using different first languages, it will be harder to manage the team than the projects developed by developers working in the same floor.
+
+Thus, we need to assess the quality and manage it to provide high-quality software to people, just like what we do to test body health conditions with medical devices.
+We want to know whether we are healthy and keep our body in a good condition and that is also what we want on software.
+A common way to evaluate the software quality is the metrics defined by the software engineering community, used in various tools \comment{Add some references here}.
+Similar to the body height, the blood pressure and other medical test results, we have various metrics quantifying different quality aspects of software.
+For example, the lines of code, security, vulnerability are typical ones among them.
+
+\section{Contributions from Developers}
+
+During the development, developers contribute to the projects with different purposes.
+Taking the construction a building as an example, we need someone to prepare materials, someone to add bricks and someone to design the architecture.
+Similar things happen when developers contribute to a software.
+Some design the architecture, some write trivial code, some test and correct errors. 
+
+\section{What We Do}
+
+As the contributions from developers various in purposes, in this research, we investigate how these contributions with different purpose vary in their impact on the software quality and how we can improve it based on our discovery and analysis results.
+In the end, the research will help achieve a better software quality and either enable vendors to provide higher-quality software or lower the overall cost of the patron, consequently decreasing the price users pay. 
+
 
 (the citation here is for passing the compilation)\cite{38631e0608b54d4299d5707f3a78debf}
 
