@@ -2,15 +2,15 @@
 \label{sec:quality}
 
 \subsection{Tool-based Quality Metrics}
+Researchers use static analysis tools and other tools to assess the quality of software. 
+For example, PMD, SonarQube and FindBugs give basic statistics of software, such as the lines of code, the number of functions, as well as quality-related metrics, such as vulnerability and code smell.
+An important approach to evaluate software quality is to use these metrics.
+\comment{Some more details here, with more descriptions of some metrics, refer to the official documentation and cite the link here.}
 
-To understand how software quality evolves over uncompilability, we identify all the broken sequences in our dataset.
-Each broken sequence starts with a breaker and ends with a fixer. The broken commits in the sequence cannot be analyzed using software quality tools. 
-However, we can compare software quality between two revisions to understand how software quality evolves over the sequence: the revision produced by the impact-parent of the breaker and the one produced by the fixer.
-The former is the last solid revision before the sequence begins and the latter is the first solid revision after the sequence ends. 
 
-
-\subsection{Compilability}
-
+\subsection{Other Independently Defined Quality Aspects}
+The software quality and quality metrics are not completely shown by the tools.
+\subsubsection{Compilability}
 
 A software revision created by a commit is expected to be compilable. However, uncompilability can occur due to careless development --- failure to compile the software locally prior to pushing to the shared repository. It can also result from variations in build environments, incompatibility across overlapping changes made by multiple developers, or changes in upstream dependencies. 
 The presence of compile errors inhibits bytecode and dynamic software analysis, as well as static analysis when the code is unparsable \cite{pooyan_esem}.
@@ -22,17 +22,19 @@ Analyzing the degradation of software quality over multiple uncompilable commits
 Also, understanding the purposes of those uncompilable commits can result in preparing guidelines to avoid such degradation in the future.
 
 
-\textbf{Compilability}.
-Multiple recent studies \cite{8170083,Seo:2014:PBE:2568225.2568255,Hassan2017ESEM,macho2018automatically,SMR:SMR1838,Behnamghader_ESEM,Behnamghader_QRS} have assessed the compilability of software repositories. 
+
+Multiple recent studies \cite{8170083,Seo:2014:PBE:2568225.2568255,Hassan2017ESEM,macho2018automatically,SMR:SMR1838, pooyan_esem, pooyan_qrs} have assessed the compilability of software repositories. 
 To our knowledge, none address the effects of developer purpose on uncompilability, or how software quality evolves when the code is uncompilable. 
 Hassan et al. \cite{8170083} focus on automatically building the last commit for the top 200 Java repositories on GitHub.
 Seo et al. \cite{Seo:2014:PBE:2568225.2568255} analyze 26.6 million builds produced over a period of 9 months by Google engineers, reporting the build failure frequency and cause, as well as how long it takes to remediate.
 Hassan et al. \cite{Hassan2017ESEM} propose a build-outcome prediction model, based on combined features of build-instance metadata and code changes, to predict whether a build will be successful.
 Macho et al. \cite{macho2018automatically} identify 125 commits in 23 repositories that repair a missing dependency, qualitatively and quantitatively analyze how the fix is applied, and propose an approach to fix dependency build breakage automatically.
 Tufano et al. \cite{SMR:SMR1838} study the compilability of 219,395 snapshots of 100 Java projects from the Apache Foundation, analyzing the frequency and possible causes of broken snapshots.
-Benamghader et al. \cite{Behnamghader_QRS} qualitatively study why developers commit uncompilable code, and design an approach \cite{Behnamghader_ESEM} to increase compilation ratio over commit history and to study sequences of uncompilable commits in terms of their length and interval.
+Benamghader et al. \cite{pooyan_qrs} qualitatively study why developers commit uncompilable code, and design an approach \cite{pooyan_esem} to increase compilation ratio over commit history and to study sequences of uncompilable commits in terms of their length and interval.
 
+To understand how software quality evolves over uncompilability, we identify all the broken sequences in our dataset.
+Each broken sequence starts with a breaker and ends with a fixer. The broken commits in the sequence cannot be analyzed using software quality tools. 
+However, we can compare software quality between two revisions to understand how software quality evolves over the sequence: the revision produced by the impact-parent of the breaker and the one produced by the fixer.
+The former is the last solid revision before the sequence begins and the latter is the first solid revision after the sequence ends. 
 
-
-\subsection{Other Quality Aspects}
 
