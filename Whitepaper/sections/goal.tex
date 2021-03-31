@@ -1,22 +1,32 @@
 \section{Plan and Goal}
 \label{sec:goal}
 
-This direction mainly focuses on investigating the developer behaviors including how they contribute to the software project, especially to open source software where we can get enough metadata for analysis to evaluate how different behaviors impact the software quality and how to improve this process for the sake of better software quality. Specifically, this research will focus on modelling the change pattern in code when contributors make the commits and how the code impacts the quality metrics. In this direction, research has been conducted to investigate when, where, how and what the developers contribute to the projects but there is still space for research from the coding side. To reveal details, for example, the change types and contents, in code level can reveal further detail how different changes related to developer behaviors and how they impact the software quality, which is represented in the software quality metrics.
-
-This direction could succeed since the current techniques in machine learning, statistics, natural language processing will be sufficient to support this research. Once it succeeds, we can provide further instructions in coding, if possible, more reliable coding standards which can lead to an improvement and standardization of coding in the software engineering area.
-
-This direction may take more than ten years since it could be a gradual improvement. The success of this direction depends on how the applied techniques evolve in the coming years. The midterm milestone could be a reasonable high prediction accuracy while the final exam milestone could be the completion of the new systematic coding standards.
-
-
-\subsection{First Stage}
-Research has been done to investigate the impact of some behaviors of developers when they contribute to software, especially open source software. However, in the previous research in this area, they haven't reveal the correlation between the change type and the code as well as their impact on the software quality. In this research, we start with categorization of commit changes in open source software repositories and show their impact on the software quality, collected by using different static analysis tools, by which we get software metrics for each revision of the software. In the end of this paper, we propose a new categorization for the commit change, based on reading the code and the commit message. We also apply neural network to train a model to predict the potential software quality changes after a certain kind of change with an accuracy of 90%.
-
-
-\subsection{The Second Stage}
-In previous research, we have been proven there exist correlation between the change type and the software quality, which is represented by the software quality metrics. However, this is not enough to put this research into valuable application. In this research, we refine the categorization by applying a natural language processing approach to the code to parse it. In this way, we can model the change into a lower level, and make more accurate prediction of what is happening in the repository of the open source software. 
+\subsection{Feasibility}
+We show the feasibility of this project by the following three aspects:
+\begin{itemize}
+    \item Data: Open-source software and version control systems provide sufficient meta-data for analysis.
+    \item Tool: Existing tools, such PMD, SonarQube, FindBugs and CAST provide various quality metrics.
+    \item Techniques: The machine learning and natural language methods required in this research already exist.
+\end{itemize}
+With all above provided, we believe this plan will succeed in 3~5 years.
+The midterm milestone is a reasonable high prediction accuracy from the machine learning model.
+The final milestone is the completion of the new systematic coding standard and development guidelines.
 
 
-\subsection{The Third Stage}
-In previous research, the researchers use natural language processing methods to predict the possible changes to the software quality based on the code changes. This means we can provide guidelines to some extent for software contributors when they commit to a software. However, the previous study mainly focus on training the model with current data which has its limitation. In this research, we collect new data from different software repositories with more than 100 coding styles, including most of existing coding styles. By comparing the different coding styles and training the new prediction model, we come up with a guideline for how to code more efficiently with less software quality issues.
+\subsection{Stage One}
+Previous researchers didn't study the correlation between the change type and the code as well as their impact on the software quality. 
+In this stage, we start with establishing categorization of commit changes in open source software repositories.
+We evaluate the quality of those changes by obtaining quality metrics from static analysis tools.
+To assess the correlation between the quality and the categories, we plan to train a machine learning model, in addition to standard mathematical correlation analyses.
 
+\subsection{Stage Two}
+In this stage, although we have categorized the commits changes, we need further insight on the distinguishing different categories.
+This is because it has been shown that high-level categories have overlaps with each other.
+In this stage, we will be working on removing the ambiguity of the categories by analyzing the code changes within the commits rather than the commit messages and manual categorizing.
+Once this is done. We will investigate the correlation between the categories and changes in code to reveal whether they have close connection and how those changes impact software quality.
+
+\subsection{Stage Three}
+In the final stage, with the refined categories, we will start construct guidelines for developers on how they can better contribute to open source software when they make different type of changes.
+In addition, we will create an index to indicate how different code patterns impact the software quality.
+We will conclude this research by completing and validating these two aspects. 
 

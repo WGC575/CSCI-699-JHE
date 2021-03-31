@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.1)  16 MAR 2021 22:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.1)  30 MAR 2021 20:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -493,7 +493,10 @@ LaTeX Warning: Citation `Behnamghader_QRS' on page 7 undefined on input line 33.
 
 LaTeX Warning: Citation `Behnamghader_ESEM' on page 7 undefined on input line 33.
 
-[7 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/cat_distribution_over_s&m_commits.pdf>]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/goal.tex [8 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/breaker_neutral.pdf>]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/conclusions.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/acknowledge.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/main.bbl [9 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/num_tasks_break_rate.pdf>]
+[7 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/cat_distribution_over_s&m_commits.pdf>]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/goal.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/conclusions.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/acknowledge.tex) [8 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/breaker_neutral.pdf>] (d:/Workspace/CSCI-699-JHE/Whitepaper/main.bbl
+Underfull \vbox (badness 3209) has occurred while \output is active []
+
+ [9 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/num_tasks_break_rate.pdf>]
 Underfull \hbox (badness 1552) in paragraph at lines 142--146
 []\T1/ptm/m/n/8 C. Ma-cho, S. McIn-tosh, and M. Pinzger, ``Au-to-mat-i-cally re-pair-
  []
@@ -524,9 +527,9 @@ Here is how much of TeX's memory you used:
  22104 multiletter control sequences out of 15000+600000
  520694 words of font info for 143 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,10n,75p,1021b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,10n,75p,859b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on d:/Workspace/CSCI-699-JHE/Whitepaper/main.pdf (10 pages, 273451 bytes).
+Output written on d:/Workspace/CSCI-699-JHE/Whitepaper/main.pdf (10 pages, 272320 bytes).
 PDF statistics:
  254 PDF objects out of 1000 (max. 8388607)
  100 compressed objects within 1 object stream
