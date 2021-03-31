@@ -1,11 +1,11 @@
-\section{Commit Types}
+\section{Commit Change Types}
 \label{sec:type}
 
-\subsection{Taxonomy}
-Previous works primarily characterize commits based on metadata.
-Alali et al.\cite{Alali} define commit properties by size -- lines of code, number of code blocks, and file count -- as well as extracted terms from commit messages.
-%\review{It would have been interesting to validate the results in [1] based on the taxonomy refinement and analyze/compare the differences. This can improve the significance of the work.}
-Kaur et al. \cite{Kaur2018} propose a classifier for labeling commit type --- bug repair, feature addition, and general --- based on commit messages.
+\subsection{Taxonomy for Commit Change Types}
+Previous works primarily characterize commits based on metadata, including commit size, commit message, which is the comment the developer leave before pushing the changes to an online repository. 
+Some other work use the categories of maintenance tasks to categorize the commits.
+Alali et al.\cite{alali_2008} examine nine open-source software systems to and characterize commit properties by size --- lines of code, number of code blocks, and file count --- as well as extracted terms from commit messages.
+Kaur et al. \cite{kaur_2018} propose a classifier for labeling commit type --- bug repair, feature addition, and general --- based on commit messages.
 However, commit message alone is not enough to effectively categorize commits. While a commit message can indicate developer intent, it will not necessarily address all the major code changes. 
 Dragan et al. \cite{Dragan} perform categorization over commit code, stereotyping added and removed methods to form a descriptor for commit change.
 Solely focusing on code to determine commit characteristics can often introduce additional noise. While commit messages are brief summaries indicating the central goal of the commit, code diffs capture details that do not affect high-level categorization. Further, determining commit type, based entirely on code, becomes difficult on extremely large commits, where a commit message may provide all of the information needed.
