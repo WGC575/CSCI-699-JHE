@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.1)  31 MAR 2021 16:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.1)  3 APR 2021 16:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -346,57 +346,7 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (c:/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-)) (d:/Workspace/CSCI-699-JHE/Whitepaper/sections/abstract.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 45--47
-[]\T1/ptm/b/it/9 Abstract\T1/ptm/b/n/9 ---It is com-mon to see soft-ware be-ing de-
- []
-
-
-Underfull \hbox (badness 4726) in paragraph at lines 45--47
-\T1/ptm/b/n/9 vel-oped with sup-port from on-line ver-sion con-trol sys-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--47
-\T1/ptm/b/n/9 ner-a-ble be-cause the de-vel-op-ers are more likely to
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--47
-\T1/ptm/b/n/9 Thus, open source soft-ware (OSS) qual-ity in-ves-ti-ga-
- []
-
-
-Underfull \hbox (badness 5161) in paragraph at lines 45--47
-\T1/ptm/b/n/9 tion, con-trol and im-prove-ments are one of the crit-i-
- []
-
-
-Underfull \hbox (badness 3460) in paragraph at lines 45--47
-\T1/ptm/b/n/9 cal is-sues in soft-ware en-gi-neer-ing, and repos-i-tory min-
- []
-
-
-Underfull \hbox (badness 1838) in paragraph at lines 45--47
-\T1/ptm/b/n/9 ti-ga-tions about an-a-lyz-ing how dif-fer-ent types of changes
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--47
-\T1/ptm/b/n/9 con-tributed by de-vel-op-ers im-pact soft-ware qual-ity.
- []
-
-
-Underfull \hbox (badness 2245) in paragraph at lines 45--47
-\T1/ptm/b/n/9 based study on com-mits, fo-cus-ing on pur-poses of com-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--47
-\T1/ptm/b/n/9 mits, com-mit mes-sage and code pat-terns, to an-a-
- []
-
-(d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/introduction.tex
+)) (d:/Workspace/CSCI-699-JHE/Whitepaper/sections/abstract.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/introduction.tex
 LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
  (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -407,11 +357,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-]
-
-LaTeX Warning: Citation `Alali' on page 2 undefined on input line 44.
-
-) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/data.tex
+]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/data.tex
 <figures/terminology.pdf, id=10, 722.7pt x 542.025pt>
 File: figures/terminology.pdf Graphic file (type pdf)
 <use figures/terminology.pdf>
@@ -424,7 +370,7 @@ File: figures/sequence.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/sequence.pdf  used on input line 30.
 (pdftex.def)             Requested size: 216.81166pt x 108.40584pt.
 ) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/type.tex
-Underfull \vbox (badness 5533) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/terminology.pdf> <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/sequence.pdf>]
 Underfull \hbox (badness 7704) in paragraph at lines 28--28
@@ -560,21 +506,17 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[10 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/commit_size.pdf>] (d:/Workspace/CSCI-699-JHE/Whitepaper/main.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+[10 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/commit_size.pdf>] (d:/Workspace/CSCI-699-JHE/Whitepaper/main.aux) ) 
 Here is how much of TeX's memory you used:
- 4745 strings out of 479023
- 72084 string characters out of 5863351
+ 4744 strings out of 479023
+ 72077 string characters out of 5863351
  566036 words of memory out of 5000000
- 22103 multiletter control sequences out of 15000+600000
+ 22102 multiletter control sequences out of 15000+600000
  520694 words of font info for 143 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,10n,75p,859b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on d:/Workspace/CSCI-699-JHE/Whitepaper/main.pdf (10 pages, 272977 bytes).
+Output written on d:/Workspace/CSCI-699-JHE/Whitepaper/main.pdf (10 pages, 272700 bytes).
 PDF statistics:
  254 PDF objects out of 1000 (max. 8388607)
  100 compressed objects within 1 object stream
