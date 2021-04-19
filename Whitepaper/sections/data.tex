@@ -1,4 +1,9 @@
 \section{Data}
+
+To conduct this empirical study, we will need a sufficient data set from various open source projects.
+The data set should contain the basic meta-data of projects and quality metrics reflecting the quality of those projects.
+In this section, we will introduce our current data set and our plan to extend the data set.
+
 \subsection{Current Data Set}
 \label{sec:data}
 
@@ -55,7 +60,16 @@ Thus, based on our dataset, we create a new threshold which defines commit size 
 The resulting threshold -- 184 lines of code -- is used to label the 600 compilable commits.
 This threshold is based on the distribution of uncompilable commits in order to motivate discussions on the relative sizes and categorization of uncompilable commits. The final dataset contains 157 each of large and small uncompilable commits, and 138 \& 462 large and small compilable commits, resp.
 
-To analyze software quality evolution over uncompilable commits in relation to the quality of compilable commits, we examine metrics on code complexity, maintainability, and security, provided by SonarQube\footnote{https://www.sonarqube.org/} and PMD\footnote{https://pmd.github.io/} and plan to utilize CAST\footnote{https://www.castsoftware.com/} \comment{Perhaps Tetrad and COCOMO II}. As uncompilable commits cannot be directly assessed by dynamic software quality analysis, we measure the overall quality change in the compilable commits before and after uncompilable sequences, extrapolating to determine the individual quality of each commit. 
+To analyze software quality evolution over uncompilable commits in relation to the quality of compilable commits, we examine metrics on code complexity, maintainability, and security, provided by SonarQube\footnote{https://www.sonarqube.org/} and PMD\footnote{https://pmd.github.io/} and plan to utilize CAST\footnote{https://www.castsoftware.com/}. As uncompilable commits cannot be directly assessed by dynamic software quality analysis, we measure the overall quality change in the compilable commits before and after uncompilable sequences, extrapolating to determine the individual quality of each commit. 
 
 
-\subsection{Additional Data to be Collected}
+\subsection{The Plan to Extend Current Data Set}
+
+Choosing the data set is a critical issue for a software repository mining research, since if the chosen data set is not representative, the conclusions won't be generally applicable.
+The intention of extending our current data set is to avoid this situation.
+We identify limitations of our current data set and how we plan to extend it as following:
+\begin{itemize}
+    \item The current data set only contains projects from three large corporations, which are from Google, Netflix and Apache. We plan to collect data from other corporations with the expectation of obtaining software data from different corporation conventions.
+    \item We focus on impactful commits in current data set. To resolve this limitation, we plan to investigate non-impactful commits and evaluate whether it is necessary to extend this research to those commits.
+\end{itemize}
+

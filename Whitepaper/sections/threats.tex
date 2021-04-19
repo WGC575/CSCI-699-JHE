@@ -1,0 +1,32 @@
+\section{Threats to Validity}
+\label{sec:threats}
+
+We discuss the threats to the validity of our empirical study based on the guidelines by Wieringa et al.
+ \cite{38631e0608b54d4299d5707f3a78debf}.
+
+%External Validity
+%Internal Validity
+%Construct Validity
+
+\textbf{External Validity.}
+The main threat is our subject systems.
+We study 1) a limited number commits from 2) a limited number of 3) open-source 4) Java systems.
+To address 1 and 2, we use a data set that contains all uncompilable commits among 68 subject systems that are selected from a variety of domains.
+To address 3, although we do not have access to close source projects, we select major for-profit and nonprofit organizations.
+Further research needs to be done to assess the generalizability of our conclusions for systems developed in other languages. 
+
+\textbf{Conclusion Validity.}
+The main threats are related to the manual inspection of the compilability of commits and the manual tagging of commits based on their purpose, which are subject to human error.
+In order to mitigate, two authors have crossed examined to confirm the uncompilability of software over the periods that we report it is broken.
+Also, four authors have done cross-validation of tagging on 100 commits, and two have done cross-validation on all 914 commits.
+
+\textbf{Internal Validity.}
+Relying on Hindle's categorization which has ambiguities can be a threat to internal validity.
+We use this categorization since it is highly cited and is the most relevant to our analysis. At the same time, we succeeded in addressing the ambiguities with further refinement in this research. 
+Using static analysis techniques that may have false positives and false negatives in measuring quality metrics is another threat.
+To mitigate this threat, we employ two well established and widely used open-source techniques (PMD and SonarQube).
+
+\textbf{Construct Validity.}
+The main threat is that we do not study the effectiveness of the refined taxonomy in comparison with other existing taxonomies.
+This is partially because the other existing taxonomies are not applicable to categorize both small and large commits in terms of their purpose. 
+To mitigate this threat, we were in contact with the authors of the original taxonomy and cross-examined the ambiguities we found.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.1)  3 APR 2021 16:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.1)  19 APR 2021 00:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -347,153 +347,164 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (c:/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) (d:/Workspace/CSCI-699-JHE/Whitepaper/sections/abstract.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/introduction.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
  (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
  (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/data.tex
-<figures/terminology.pdf, id=10, 722.7pt x 542.025pt>
+]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/data.tex [2]
+<figures/terminology.pdf, id=14, 722.7pt x 542.025pt>
 File: figures/terminology.pdf Graphic file (type pdf)
 <use figures/terminology.pdf>
-Package pdftex.def Info: figures/terminology.pdf  used on input line 12.
+Package pdftex.def Info: figures/terminology.pdf  used on input line 17.
 (pdftex.def)             Requested size: 216.81166pt x 162.60875pt.
- [2]
 <figures/sequence.pdf, id=15, 722.7pt x 361.35pt>
 File: figures/sequence.pdf Graphic file (type pdf)
 <use figures/sequence.pdf>
-Package pdftex.def Info: figures/sequence.pdf  used on input line 30.
+Package pdftex.def Info: figures/sequence.pdf  used on input line 35.
 (pdftex.def)             Requested size: 216.81166pt x 108.40584pt.
-) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/type.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [3 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/terminology.pdf> <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/sequence.pdf>]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/type.tex
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+[]\T1/ptm/m/n/8 Types of
+ []
 
- [3 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/terminology.pdf> <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/sequence.pdf>]
-Underfull \hbox (badness 7704) in paragraph at lines 28--28
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+\T1/ptm/m/n/8 widespread
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+[]\T1/ptm/m/n/8 Argument
+ []
+
+[4]
+Underfull \hbox (badness 7704) in paragraph at lines 79--79
 []\T1/ptm/m/n/8 One or more bug
  []
 
 
-Overfull \hbox (1.32753pt too wide) in paragraph at lines 42--42
+Overfull \hbox (1.32753pt too wide) in paragraph at lines 93--93
 []\T1/ptm/m/n/8 Documentation| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 []\T1/ptm/m/n/8 An ad-di-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 \T1/ptm/m/n/8 tion/implementation
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 []\T1/ptm/m/n/8 New func-tion/methods/class
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 \T1/ptm/m/n/8 im-ple-mented, im-pact-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--52
+Underfull \hbox (badness 10000) in paragraph at lines 103--103
 []\T1/ptm/m/n/8 Internationa-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--54
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
 []\T1/ptm/m/n/8 Source
  []
 
 
-Underfull \hbox (badness 1389) in paragraph at lines 56--56
+Underfull \hbox (badness 1389) in paragraph at lines 107--107
 []\T1/ptm/m/n/8 A com-mit that per-
  []
 
 
-Underfull \hbox (badness 2318) in paragraph at lines 56--56
+Underfull \hbox (badness 2318) in paragraph at lines 107--107
 \T1/ptm/m/n/8 mon dur-ing main-te-
  []
 
 
-Underfull \hbox (badness 7133) in paragraph at lines 56--56
+Underfull \hbox (badness 7133) in paragraph at lines 107--107
 []\T1/ptm/m/n/8 Functional changes with-out
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--64
+Underfull \hbox (badness 10000) in paragraph at lines 115--115
 []\T1/ptm/m/n/8 Module
  []
 
 
-Underfull \hbox (badness 5050) in paragraph at lines 68--68
+Underfull \hbox (badness 5050) in paragraph at lines 119--119
 []\T1/ptm/m/n/8 Refactoring of por-
  []
 
 
-Underfull \hbox (badness 2635) in paragraph at lines 68--68
+Underfull \hbox (badness 2635) in paragraph at lines 119--119
 \T1/ptm/m/n/8 tions of the source
  []
 
 
-Overfull \hbox (4.0pt too wide) in paragraph at lines 22--81
+Overfull \hbox (4.0pt too wide) in paragraph at lines 73--132
  [][][] 
  []
 
-[4]
+[5]
 
 pdfTeX warning: pdflatex.exe (file d:/Workspace/CSCI-699-JHE/Whitepaper/figures/independent_change.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/independent_change.pdf, id=55, 542.025pt x 650.43pt>
+<figures/independent_change.pdf, id=58, 542.025pt x 650.43pt>
 File: figures/independent_change.pdf Graphic file (type pdf)
 <use figures/independent_change.pdf>
-Package pdftex.def Info: figures/independent_change.pdf  used on input line 125.
+Package pdftex.def Info: figures/independent_change.pdf  used on input line 173.
 (pdftex.def)             Requested size: 271.01183pt x 325.2142pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/independent_change.pdf>]
-<figures/cat_distribution_over_s&m_commits.pdf, id=69, 1806.75pt x 867.24pt>
+<figures/cat_distribution_over_s&m_commits.pdf, id=59, 1806.75pt x 867.24pt>
 File: figures/cat_distribution_over_s&m_commits.pdf Graphic file (type pdf)
 <use figures/cat_distribution_over_s&m_commits.pdf>
-Package pdftex.def Info: figures/cat_distribution_over_s&m_commits.pdf  used on input line 160.
+Package pdftex.def Info: figures/cat_distribution_over_s&m_commits.pdf  used on input line 204.
 (pdftex.def)             Requested size: 542.02919pt x 260.17401pt.
-<figures/breaker_neutral.pdf, id=70, 469.755pt x 869.2475pt>
+[6 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/independent_change.pdf>]
+<figures/num_tasks_break_rate.pdf, id=73, 867.24pt x 433.62pt>
+File: figures/num_tasks_break_rate.pdf Graphic file (type pdf)
+<use figures/num_tasks_break_rate.pdf>
+Package pdftex.def Info: figures/num_tasks_break_rate.pdf  used on input line 225.
+(pdftex.def)             Requested size: 520.34802pt x 260.17401pt.
+<figures/breaker_neutral.pdf, id=74, 469.755pt x 869.2475pt>
 File: figures/breaker_neutral.pdf Graphic file (type pdf)
 <use figures/breaker_neutral.pdf>
-Package pdftex.def Info: figures/breaker_neutral.pdf  used on input line 175.
+Package pdftex.def Info: figures/breaker_neutral.pdf  used on input line 240.
 (pdftex.def)             Requested size: 234.87692pt x 434.62268pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<figures/num_tasks_break_rate.pdf, id=71, 867.24pt x 433.62pt>
-File: figures/num_tasks_break_rate.pdf Graphic file (type pdf)
-<use figures/num_tasks_break_rate.pdf>
-Package pdftex.def Info: figures/num_tasks_break_rate.pdf  used on input line 274.
-(pdftex.def)             Requested size: 520.34802pt x 260.17401pt.
- [6]
-<figures/commit_size.pdf, id=75, 1011.78pt x 433.62pt>
+
+Underfull \vbox (badness 4467) has occurred while \output is active []
+
+ [7 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/cat_distribution_over_s&m_commits.pdf>]
+<figures/commit_size.pdf, id=133, 1011.78pt x 433.62pt>
 File: figures/commit_size.pdf Graphic file (type pdf)
 <use figures/commit_size.pdf>
-Package pdftex.def Info: figures/commit_size.pdf  used on input line 294.
+Package pdftex.def Info: figures/commit_size.pdf  used on input line 332.
 (pdftex.def)             Requested size: 505.88876pt x 216.80946pt.
 ) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/message.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/pattern.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/quality.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1442) has occurred while \output is active []
 
- [7 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/cat_distribution_over_s&m_commits.pdf>]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/goal.tex [8 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/breaker_neutral.pdf>]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/conclusions.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/acknowledge.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/main.bbl [9 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/num_tasks_break_rate.pdf>]
-Underfull \vbox (badness 1735) has occurred while \output is active []
-
-
-Underfull \hbox (badness 1552) in paragraph at lines 142--146
+ [8 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/num_tasks_break_rate.pdf>] [9 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/breaker_neutral.pdf>]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/goal.tex [10 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/commit_size.pdf>]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/conclusions.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/threats.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/acknowledge.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/main.bbl [11]
+Underfull \hbox (badness 1552) in paragraph at lines 214--218
 []\T1/ptm/m/n/8 C. Ma-cho, S. McIn-tosh, and M. Pinzger, ``Au-to-mat-i-cally re-pair-
  []
 
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `Undefined'. Using the pattern for
+** the default language instead.
 )
 
 ** Conference Paper **
@@ -506,20 +517,22 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[10 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/commit_size.pdf>] (d:/Workspace/CSCI-699-JHE/Whitepaper/main.aux) ) 
+[12
+
+] (d:/Workspace/CSCI-699-JHE/Whitepaper/main.aux) ) 
 Here is how much of TeX's memory you used:
- 4744 strings out of 479023
- 72077 string characters out of 5863351
+ 4765 strings out of 479023
+ 72520 string characters out of 5863351
  566036 words of memory out of 5000000
- 22102 multiletter control sequences out of 15000+600000
+ 22120 multiletter control sequences out of 15000+600000
  520694 words of font info for 143 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,10n,75p,859b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,10n,75p,704b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on d:/Workspace/CSCI-699-JHE/Whitepaper/main.pdf (10 pages, 272700 bytes).
+Output written on d:/Workspace/CSCI-699-JHE/Whitepaper/main.pdf (12 pages, 283364 bytes).
 PDF statistics:
- 254 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
+ 261 PDF objects out of 1000 (max. 8388607)
+ 104 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

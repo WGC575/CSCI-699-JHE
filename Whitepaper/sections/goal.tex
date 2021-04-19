@@ -1,32 +1,45 @@
-\section{Research Challenges and Goals}
+\section{Research Plan and Goals}
 \label{sec:goal}
 
-\subsection{Feasibility}
-We show the feasibility of this project by the following three aspects:
-\begin{itemize}
-    \item Data: Open-source software and version control systems provide sufficient meta-data for analysis.
-    \item Tool: Existing tools, such PMD, SonarQube, FindBugs and CAST provide various quality metrics.
-    \item Techniques: The machine learning and natural language methods required in this research already exist.
-\end{itemize}
-With all above provided, we believe this plan will succeed in 3~5 years.
-The midterm milestone is a reasonable high prediction accuracy from the machine learning model.
-The final milestone is the completion of the new systematic coding standard and development guidelines.
-
+In previous sections, we present the data set and tools we will use in this research, investigate the sub-areas related to this research topic, and identify the corresponding research challenges.
+To resolve the challenges, we come up with the following research plan and explain the benefits of this research:
 
 \subsection{Stage One}
-Previous researchers didn't study the correlation between the change type and the code as well as their impact on the software quality. 
-In this stage, we start with establishing categorization of commit changes in open source software repositories.
+Few researchers have studied the correlation between the change type and the code, or how change type impacts quality. 
+In this stage, we start by refining the existing categorization of commit changes in open source software repositories.
 We evaluate the quality of those changes by obtaining quality metrics from static analysis tools.
-To assess the correlation between the quality and the categories, we plan to train a machine learning model, in addition to standard mathematical correlation analyses.
+To assess the correlation between the quality and the categories, we will train a machine learning model, in addition to applying standard mathematical correlation analyses.
 
 \subsection{Stage Two}
-In this stage, although we have categorized the commits changes, we need further insight on the distinguishing different categories.
-This is because it has been shown that high-level categories have overlaps with each other.
-In this stage, we will be working on removing the ambiguity of the categories by analyzing the code changes within the commits rather than the commit messages and manual categorizing.
-Once this is done. We will investigate the correlation between the categories and changes in code to reveal whether they have close connection and how those changes impact software quality.
+In this stage, although we have categorized the commit changes, further work distinguishing between different categories is required.
+This is because high-level categories overlap.
+In this stage, we will remove the ambiguity of the categories by analyzing the code changes within the commits rather than the commit messages and manual categorizing.
+Once this is done, we will investigate the correlation between the categories and changes in code to reveal whether they correlate and how those changes impact software quality.
 
 \subsection{Stage Three}
-In the final stage, with the refined categories, we will start construct guidelines for developers on how they can better contribute to open source software when they make different type of changes.
-In addition, we will create an index to indicate how different code patterns impact the software quality.
+In the final stage, we will construct guidelines which will help developers develop software.
+In addition, we will create an index which explains how different code patterns impact the quality.
 We will conclude this research by completing and validating these two aspects. 
 
+\subsection{Feasibility}
+This project is feasible because the requisite data, tools and techniques are readily available:
+\begin{itemize}
+    \item Data: Open-source software and Git provide sufficient meta-data from Google, Netflix and Apache projects.
+    \item Tool: PMD, SonarQube, FindBugs and CAST provide various quality metrics.
+    \item Techniques: Machine learning and natural language methods.
+\end{itemize}
+With all above, we believe this plan will succeed in three to five years.
+The midterm milestone is the reasonably high prediction accuracy from the machine learning model.
+The final milestone is the completion of the new systematic coding standard and development guidelines.
+%This direction could succeed since the current techniques in machine learning, statistics, natural language processing will be sufficient to support this research. 
+
+\subsection{Benefits}
+
+We will be able to provide guidelines on how open-source software developers, when contributing to projects,  can improve quality. 
+In addition, the results of the second stage will allow us to provide more reliable coding standards and will improve overall code quality.
+Improved quality will help to reduce cost and improve software service quality.
+
+\subsection{Intellectual Advancement}
+
+The first goal of this research is to make concrete improvements in the quality of open-software by providing guidelines for developers and, thus, to improve code quality. 
+We believe this will also change the way people think, code and develop software.
