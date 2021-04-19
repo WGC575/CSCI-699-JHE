@@ -1,6 +1,25 @@
 \section{Commit Message}
 \label{sec:message}
-\subsection{Initiatives of Commit Messages}
-Commit messages are explanation messages 
-\subsection{Preprocessing Removal of Useless Information in Commit Messages}
-\subsection{The Relation Between Commit Message and Software Quality}
+
+Commit messages are explanation provided by developers when they push their changes to the shared developing repository.
+They include the initiatives of those changes and help others to understand what the developers did.
+Thus, the commit messages are important materials that research can use to help categorize commits. 
+In fact, in most studies we mentioned in the previous section, they use commit messages a major resource for automating the categorization.
+Beyond this, there are works in which researchers automate generating commit messages for commits to support development.
+We believe this is also an important application for this research, since a well-established categorization will provide important and well-structured information of what the commits do.
+
+\subsection{Use Commit Messages to support categorization}
+
+We will use code as our major source for categorization. 
+But we will also make use of commits messages to support it.
+One of the major challenges in this step will be removing the useless information in commit messages.
+We plan to apply natural language processing techniques to support this step.
+
+\subsection{Automated Message Generation}
+
+There are existing works for automatic commit message generation. For example, Cortes et al. \cite{cortes2014automatically} introduce ChangeScribe approach for automatic message generation and Linares et al. \cite{linares2015changescribe} demonstrate the approach.
+Jiang et al. \cite{jiang2017automatically } automatically generating commit messages from code changes by applying neural machine translation techniques.
+
+However, they don't have a core, well-grained categorization to support message generation.
+Our categorization will provide support for it.
+

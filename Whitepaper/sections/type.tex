@@ -354,5 +354,22 @@ For example, Levin's model use three categories: ``adaptive'', ``corrective'', a
 
 As we want to propose our own more complicated categorization, it will be necessary to construct a new model for automated categorization.
 
-\subsection{Research Challenges}
+\subsection{Research Challenges in Categorizing Commits}
 
+Work has been done to categorize commits in different ways and apply the categorizations to train prediction models. 
+However, there is a problem left unresolved in categorization.
+The major one is the ambiguity of the concepts.
+
+For example, the term ``bug'', used in some of the categorizations we mentioned, was first used by Grace Hopper, used to describe a failure in an early electromechanical computer back in 1946. 
+Later, the term ``bug'', is widely used in software engineering, used to describe an error, flaw or fault in a computer program or system that leads to an incorrect or unexpected result, or to behave in unintended ways.
+The reason why it is a failure is that the concept itself is vague and sometimes misleading. 
+It aims at a clear boundary but ends up without getting one. 
+The word ``bug'' may be divorced from a sense that a human being caused the problem, and instead implies that the defect arose on its own. 
+Sometimes, it is better to describe a ``mistake'' in software more accurately using other terms in software mistake metamorphism to avoid ambiguity.
+
+This problem also happen in other categorizations, like ``maintenance'', used in Hindle's categorization, which is the most ambiguous one even for manual classification.
+
+Thus, as the core of our research, we plan to resolve this problem by create a more fine-grained categorization. 
+Instead of relying majorly on commit messages, we will characterize code changes and use them as major source for categorization, while also using commit messages and meta-data as supporting materials.
+
+After the creation of our categorization, it will be necessary to investigate how to automate classification in a novel way, since we have a new and more fine-grained categorization.
