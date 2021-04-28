@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.1)  19 APR 2021 11:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.1)  27 APR 2021 21:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -312,20 +312,20 @@ Package: multirow 2021/01/29 v2.7 Span multiple rows of a table
 ) (d:/Workspace/CSCI-699-JHE/Whitepaper/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
 
 -- Lines per column: 56 (exact).
 (c:/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -346,7 +346,10 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (c:/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-)) (d:/Workspace/CSCI-699-JHE/Whitepaper/sections/abstract.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/introduction.tex
+)) [0
+
+
+{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (d:/Workspace/CSCI-699-JHE/Whitepaper/sections/abstract.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/introduction.tex
 LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
  (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -354,21 +357,21 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
  (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+) [1
 
-
-]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/data.tex [2]
-<figures/terminology.pdf, id=14, 722.7pt x 542.025pt>
+]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/data.tex
+<figures/terminology.pdf, id=13, 722.7pt x 542.025pt>
 File: figures/terminology.pdf Graphic file (type pdf)
 <use figures/terminology.pdf>
 Package pdftex.def Info: figures/terminology.pdf  used on input line 17.
 (pdftex.def)             Requested size: 216.81166pt x 162.60875pt.
-<figures/sequence.pdf, id=15, 722.7pt x 361.35pt>
+ [2 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/terminology.pdf>]
+<figures/sequence.pdf, id=29, 722.7pt x 361.35pt>
 File: figures/sequence.pdf Graphic file (type pdf)
 <use figures/sequence.pdf>
 Package pdftex.def Info: figures/sequence.pdf  used on input line 35.
 (pdftex.def)             Requested size: 216.81166pt x 108.40584pt.
- [3 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/terminology.pdf> <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/sequence.pdf>]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/type.tex
+) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/type.tex [3 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/sequence.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 34--34
 []\T1/ptm/m/n/8 Types of
  []
@@ -383,7 +386,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--36
 []\T1/ptm/m/n/8 Argument
  []
 
-[4]
+
 Underfull \hbox (badness 7704) in paragraph at lines 79--79
 []\T1/ptm/m/n/8 One or more bug
  []
@@ -458,7 +461,7 @@ Overfull \hbox (4.0pt too wide) in paragraph at lines 73--132
  [][][] 
  []
 
-[5]
+[4]
 
 pdfTeX warning: pdflatex.exe (file d:/Workspace/CSCI-699-JHE/Whitepaper/figures/independent_change.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 <figures/independent_change.pdf, id=58, 542.025pt x 650.43pt>
@@ -466,35 +469,32 @@ File: figures/independent_change.pdf Graphic file (type pdf)
 <use figures/independent_change.pdf>
 Package pdftex.def Info: figures/independent_change.pdf  used on input line 173.
 (pdftex.def)             Requested size: 271.01183pt x 325.2142pt.
-<figures/cat_distribution_over_s&m_commits.pdf, id=59, 1806.75pt x 867.24pt>
+[5]
+<figures/cat_distribution_over_s&m_commits.pdf, id=62, 1806.75pt x 867.24pt>
 File: figures/cat_distribution_over_s&m_commits.pdf Graphic file (type pdf)
 <use figures/cat_distribution_over_s&m_commits.pdf>
 Package pdftex.def Info: figures/cat_distribution_over_s&m_commits.pdf  used on input line 204.
 (pdftex.def)             Requested size: 542.02919pt x 260.17401pt.
-[6 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/independent_change.pdf>]
-<figures/num_tasks_break_rate.pdf, id=73, 867.24pt x 433.62pt>
+<figures/num_tasks_break_rate.pdf, id=63, 867.24pt x 433.62pt>
 File: figures/num_tasks_break_rate.pdf Graphic file (type pdf)
 <use figures/num_tasks_break_rate.pdf>
 Package pdftex.def Info: figures/num_tasks_break_rate.pdf  used on input line 225.
 (pdftex.def)             Requested size: 520.34802pt x 260.17401pt.
-<figures/breaker_neutral.pdf, id=74, 469.755pt x 869.2475pt>
+<figures/breaker_neutral.pdf, id=64, 469.755pt x 869.2475pt>
 File: figures/breaker_neutral.pdf Graphic file (type pdf)
 <use figures/breaker_neutral.pdf>
 Package pdftex.def Info: figures/breaker_neutral.pdf  used on input line 240.
 (pdftex.def)             Requested size: 234.87692pt x 434.62268pt.
+ [6 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/independent_change.pdf>] [7 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/cat_distribution_over_s&m_commits.pdf> <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/num_tasks_break_rate.pdf
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 4467) has occurred while \output is active []
-
- [7 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/cat_distribution_over_s&m_commits.pdf>]
-<figures/commit_size.pdf, id=133, 1011.78pt x 433.62pt>
+pdfTeX warning: pdflatex.exe (file d:/Workspace/CSCI-699-JHE/Whitepaper/figures/num_tasks_break_rate.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<figures/commit_size.pdf, id=174, 1011.78pt x 433.62pt>
 File: figures/commit_size.pdf Graphic file (type pdf)
 <use figures/commit_size.pdf>
 Package pdftex.def Info: figures/commit_size.pdf  used on input line 332.
 (pdftex.def)             Requested size: 505.88876pt x 216.80946pt.
- [8 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/num_tasks_break_rate.pdf>]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/message.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/pattern.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/quality.tex [9 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/breaker_neutral.pdf>]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/goal.tex [10 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/commit_size.pdf>]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/conclusions.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/threats.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/acknowledge.tex) [11] (d:/Workspace/CSCI-699-JHE/Whitepaper/main.bbl
+ [8 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/breaker_neutral.pdf>]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/message.tex [9 <d:/Workspace/CSCI-699-JHE/Whitepaper/figures/commit_size.pdf>]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/pattern.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/quality.tex [10]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/goal.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/conclusions.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/threats.tex [11]) (d:/Workspace/CSCI-699-JHE/Whitepaper/./sections/acknowledge.tex) (d:/Workspace/CSCI-699-JHE/Whitepaper/main.bbl [12]
 Underfull \hbox (badness 1552) in paragraph at lines 234--238
 []\T1/ptm/m/n/8 C. Ma-cho, S. McIn-tosh, and M. Pinzger, ``Au-to-mat-i-cally re-pair-
  []
@@ -502,7 +502,7 @@ Underfull \hbox (badness 1552) in paragraph at lines 234--238
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `Undefined'. Using the pattern for
 ** the default language instead.
-[12])
+)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -519,17 +519,17 @@ Before submitting the final camera ready copy, remember to:
 ] (d:/Workspace/CSCI-699-JHE/Whitepaper/main.aux) ) 
 Here is how much of TeX's memory you used:
  4768 strings out of 479023
- 72594 string characters out of 5863351
- 566036 words of memory out of 5000000
+ 72598 string characters out of 5863351
+ 569036 words of memory out of 5000000
  22123 multiletter control sequences out of 15000+600000
- 520694 words of font info for 143 fonts, out of 8000000 for 9000
+ 522338 words of font info for 144 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,10n,75p,704b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,10n,75p,704b,250s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on d:/Workspace/CSCI-699-JHE/Whitepaper/main.pdf (13 pages, 286370 bytes).
+Output written on d:/Workspace/CSCI-699-JHE/Whitepaper/main.pdf (14 pages, 288299 bytes).
 PDF statistics:
- 265 PDF objects out of 1000 (max. 8388607)
- 107 compressed objects within 2 object streams
+ 267 PDF objects out of 1000 (max. 8388607)
+ 108 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

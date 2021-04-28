@@ -1,4 +1,10 @@
-\section{Code Patterns}
+\section{Linking Code to Commit Categories}
 \label{sec:pattern}
-\subsection{Different Patterns Existing in Code.}
-\subsection{Different Patterns May Have Different Impact on Software Quality}
+As we mentioned in Section \ref{sec:type}, we will use code changes as our major source for manual and automated classification, because code changes are the most direct information about what the commits do.
+While commit messages provide information about the initiatives of developers, the code changes provide direct information about what they exactly do.
+There is a gap between the initiatives and the exact work done.
+When we review the commits during manual categorizing, we find inconsistency between the code changes and what they report in their commit messages.
+For example, a developer may make a small change and a major change but only report the major change. 
+However, the unexpected small one may introduce a defect in the software. 
+But as it is not included in the commit message, it will be hard for maintainers to track this kind of changes.
+We will investigate into this as an important step in our research to demonstrate the importance of our categorization work, thus the importance of establishing a good categorization, linking it to every single code change, and supporting the development and maintenance.

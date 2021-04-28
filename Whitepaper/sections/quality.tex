@@ -1,15 +1,21 @@
 \section{Software Quality}
 \label{sec:quality}
 
+The final goal of this research is to improve software quality.
+Either the automation of the classification of commits or commit messages will in the end contribute to improved maintenance process, thus higher software quality.
+In this section, we will introduce how we evaluate software quality in our research.
+
 \subsection{Tool-based Quality Metrics}
 Researchers use static analysis tools and other tools to assess the quality of software. 
 For example, PMD, SonarQube and FindBugs give basic statistics of software, such as the lines of code, the number of functions, as well as quality-related metrics, such as vulnerability and code smell.
-An important approach to evaluate software quality is to use these metrics.
-\comment{Some more details here, with more descriptions of some metrics, refer to the official documentation and cite the link here.}
-
+CAST software provide additional architecture evaluation.
+We will evaluate software quality by using these metrics.
 
 \subsection{Other Independently Defined Quality Aspects}
 The software quality and quality metrics are not completely shown by the tools.
+For example, they can't evaluate the quality when the software are not compilable. 
+And the compilability is one of the most basic quality software should possess.
+
 \subsubsection{Compilability}
 
 A software revision created by a commit is expected to be compilable. However, uncompilability can occur due to careless development --- failure to compile the software locally prior to pushing to the shared repository. It can also result from variations in build environments, incompatibility across overlapping changes made by multiple developers, or changes in upstream dependencies. 
@@ -20,8 +26,6 @@ Behnamghader et al. \cite{pooyan_qrs} explore the qualitative properties of unco
 Further insight into the types of commits that most frequently cause build errors can help to inform better development practices. Additionally, this correlation can be used as a part of future methods for predicting and preventing uncompilable commits. 
 Analyzing the degradation of software quality over multiple uncompilable commits highlights the long-term negative impact of careless development, and the importance of fixing build errors immediately after they take place.
 Also, understanding the purposes of those uncompilable commits can result in preparing guidelines to avoid such degradation in the future.
-
-
 
 Multiple recent studies \cite{8170083,Seo:2014:PBE:2568225.2568255,Hassan2017ESEM,macho2018automatically,SMR:SMR1838, pooyan_esem, pooyan_qrs} have assessed the compilability of software repositories. 
 To our knowledge, none address the effects of developer purpose on uncompilability, or how software quality evolves when the code is uncompilable. 
@@ -37,4 +41,7 @@ Each broken sequence starts with a breaker and ends with a fixer. The broken com
 However, we can compare software quality between two revisions to understand how software quality evolves over the sequence: the revision produced by the impact-parent of the breaker and the one produced by the fixer.
 The former is the last solid revision before the sequence begins and the latter is the first solid revision after the sequence ends. 
 
+\subsection{Our Approach}
 
+In our research, we will combine the quality metrics with other quality aspects, such as compilability to reflect the overall quality of the software.
+We will investigate how different categories of changes impact the quality and how we can avoid the defects.
