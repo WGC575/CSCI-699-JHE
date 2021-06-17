@@ -1,50 +1,53 @@
 \section{Introduction}
 \label{sec:introduction}
 
-Before explaining any details of this research agenda, we introduce the context of this research, including open source software, version control system and different aspects of software repository mining that should be considered when we conduct the research. 
-These aspects include commit impacts, purposes, commit message, code pattern and software quality.
+Before explaining any details of this agenda, we introduce the context of this research, including open source software, version control systems and different aspects of software repository mining that should be considered. 
+These aspects include commit impacts, purposes, commit messages, code patterns and software quality.
 We conclude this section with an outline of the rest of this white paper. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Open Source Software and Version Control System}
-It has been a long time since developing software in an open source repository became a common way of developing software. 
-In those project, some of them are of industrial scale.
-As the scale has grown far beyond the level that an individual can control and manage, how to efficiently conduct quality control and project management is one of the critical issue in open source software development.
+\subsection{Open Source Software and Version Control Systems}
+Using open-source repositories has long been a common way to develop software.
+Some of these projects are on an industrial scale.
+% on an industrial scale
+As the scale has grown far beyond the level that an individual can control and manage, how to efficiently conduct quality control and project management is critical.
 
-Most industry-scale software are developed by iterative contributions from the project teams, through ICSM \cite{icsm2014}, Agile \cite{agile2004}, DevOps \cite{devops2016} or other process models. 
-In the iterations, version control systems, such as Git and SVN, play a critical role by enabling and facilitate the concurrent contributions from developers.
-Each revision, or commitment (referred as ``commit'' in the rest of the paper) contains diffs which are the lines developers change.
+Most industrial-scale software is developed by iterative contributions from project teams, through ICSM \cite{icsm2014}, Agile \cite{agile2004}, DevOps \cite{devops2016} or other process models. 
+In the iterations, version control systems, such as Git and SVN, play a critical role by enabling and facilitating the concurrent contributions from developers.
+Each revision, or commitment (hereafter ``commit''), contains diffs which are the lines developers change.
 
-These changes can be made by developers from different area of the world, at different times, with different purposes and have different level of impacts on the software \cite{qrs2020}, correspondingly having negative or positive impact on the software quality. 
-Thus, it is necessary to investigate how these differences influence the software quality to understand it and control it better during the development and maintenance phases. 
+%hereafter
 
-Focusing on the different purposes of commits, this research white paper investigate how different types of commits, with respect to their purposes, impact the software quality and propose what we can do to control it. 
+These changes can be made by developers from different areas of the world, at different times, have different purposes and have different impacts on the software \cite{qrs2020}, be they negative or positive. 
+Thus, it is necessary to investigate how these differences influence software quality, and thus to better control the quality during the development and maintenance phases. 
+
+Focusing on the different purposes of commits, this white paper investigates how different types of commits impact software quality and propose guidelines for improving. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Level of Commit Impacts}
-In all commits to a project, some commits can be less while others being more impactful on the project and software quality.
-Some projects have multiple modules, one of which is core modules while others are less critical to the entire project. 
-Moreover, some commits many contains only a few documentation fixes while others do hundreds of lines of modifications.
-These commits in this situation can have different level of impact on the entire project.
+In projects, some commits impact software quality more than others.
+For example, commits that change core modules, which modify system functionalities are more impactful than those that contain only a few lines of documentation fixes.
 
-The level of impact can be defined in various ways to specify what to investigate. For example, in some previous study, researchers defined impactful commits by whether they are in the core module \cite{pooyan_esem, pooyan_qrs}.
-We believe that the more critical are the commits, the earlier they should be taken care of, in the sense of quality control and management. 
+The level of impact can be defined in various ways to specify what to investigate. For example, in previous studies, researchers have defined impactful commits by whether they are in the core module \cite{pooyan_esem, pooyan_qrs}.
+We believe that the more critical the commits are, the earlier they should be taken care of, in the sense of quality control and management. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Purposes of Commits}
-While the level of impact can be different, the type of commits can also be different.
-For example, some commits add a few lines of documentation or comments to code while others can refactoring the code structure or made module-level modifications.
+While the levels of impact differ, the commits also vary in their purposes.
+For example, some commits merely add a few lines of documentation or comments to code while others refactor the entire code structure or made module-level modifications.
 
+
+\comment{A better transition here.}
 It is common for developers to upload single-purpose commits\footnote{https://www.freshconsulting.com/atomic-commits/}. 
-However, in commits where changes such as refactoring, adding new dependencies, minor fixing happen, the commits tend to grow beyond its intended task. 
-Each commit includes a prescriptive message documenting the changes made\footnote{https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project}, in practice with varying degrees of efficacy. 
+However, in commits where developers refactor code, add new dependencies, or apply minor fixes, the commits tend to grow beyond their intended task.
+In this case, commits become multi-purpose, and it has been proven in a previous study \cite{qrs2020} that multi-purpose commits have negative impacts on software quality, compared to single purposes ones.
+%Each commit includes a prescriptive message documenting the changes made\footnote{https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project}, in practice with varying degrees of efficacy. 
+In addition, it has been shown that some types of commits, such as ``feature add'', are more likely to have negative impacts on software quality.
+Thus, it is important to investigate how different types of commits impact various aspects of quality and how they are related to the other metadata of software to create new guidelines for developers, thus help them improve the quality.
 
-In addition, it has been shown that different types, by purpose, of commits have impact on one aspect of the software quality, which is compilability\cite{qrs2020}.
-Thus, it is worth working on to investigate how different types of commits impact other aspects of software quality and how they are related to the other metadata of software to acquire a new series guidelines by which developers can following to help improve the overall software quality.
-
-Previous research has produced and refined taxonomies for commit categorization \cite{Hindle_cate,alali_2008,Dragan,Swanson, Mauczka, Hindle_auto,qrs2020} which is an option for this research for understanding the purposes of commits.
+To achieve this, we review previous works that categorize commits and find that some of them have produced taxonomies for commit purposes \cite{Hindle_cate,alali_2008,Dragan,Swanson, Mauczka, Hindle_auto,qrs2020} which we will evaluate and adopt.
 
 %Thus, we start with the commit purpose taxonomy from Hindle et al. \cite{Hindle_cate}, refine, standardize, and expand it to make it applicable for small commits. 
 %However, other studies \cite{x} report that 75\% of software development budgets are dedicated to maintenance.
@@ -53,56 +56,59 @@ Previous research has produced and refined taxonomies for commit categorization 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Commit Message}
 One critical piece of the project metadata is the commit message. 
-When developers push some change to the online repository, a commit message is usually required to explain what they have change in the commit they want to push.
+When developers push changes to online repositories, they are required to add commit messages to explain their changes.
 
-These messages provide important clues for understanding the purposes, thus the types of those commits. 
-As a result, in order to conduct this categorizational study, a further insight is needed in analyzing commit message, about how they are written by human, how they are generated by some agents and how they are related to the software quality, for example, readability and maintenability.
-
+These messages provide important clues for understanding the purposes of those commits. 
+As a result, it is important to analyze commit messages to help understand the purposes of the commits and categorize them.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Code Pattern}
-The commit messages are summaries from developers about their work while the code is more fundamental and significant part of the commits. 
-How code should be written, for the sake of better software quality, has long been a hard problem to attack.
+The commit messages are, in effect, summaries from developers about their code changes.
+%in effect
 
-A good example of this kind of work can be Dr. Liscov and her contribution to code hierachy.
 
-Also, there are some work aiming at how to generate code automatically, which can be seen in testing code generation tools.
+%The code can be written in different manners, and which one is the best to
+%A good example is Dr. Liscov and her contribution to code hierachy.
 
-Both hand-typed code and auto-generated code are related to this research.
-For hand-written code, it is possible to use them to train a prediction model by using NLP techniques to automatically extract keywords from code changes, thus supporting the categorization.
-On the other hand, auto-generation can be one of the applicational practice of the research results, since one of the goal of the research is to build guidelines of how to better contribute to software with respect to different types of changes.
+Also, there are works aiming at how to generate code automatically which lead to inventions of code generation tools.
+Both hand-typed and auto-generated code are related to this research.
+For hand-written, it is possible to use them to train a prediction model by using NLP techniques to automatically extract keywords from code changes, which explain their purposes.
+On the other hand, the outcome of this research, for example the guidelines, are useful when developing code generation tools.
+\comment{Think about whether to add this application into abstract.}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Software Quality}
-The final goal of the research is to improve software quality in the sense of how to contribute to open source software. 
-Thus, defining the way to assess software quality of projects is one of the most important issues of this research.
+The final goal of the research is to improve software quality.
+Thus, defining assessment guidelines for software quality is one of the most important issues of this research.
 
-As we know, software quality can be evaluated from different directions. 
+Software quality is evaluated using different tools depending on one's purpose. 
 For example, COCOMO and COCOMO II \cite{cocomo1995} evaluate software with respect to their cost. 
-PMD \footnote{https://pmd.github.io/}, SonarQube \footnote{https://www.sonarqube.org/} and FindBugs \footnote{http://findbugs.sourceforge.net/} assess software by defining metrics based on software metadata and algorithms, reflecting security, vulnerability and bugs. 
-CAST software \footnote{https://www.castsoftware.com} provides architecture evaluation in addition to other metrics.
+PMD \footnote{https://pmd.github.io/}, SonarQube \footnote{https://www.sonarqube.org/} and FindBugs \footnote{http://findbugs.sourceforge.net/} define metrics based on software metadata and algorithms to evaluate security, vulnerability and bugs. 
+CAST software \footnote{https://www.castsoftware.com} provides architecture evaluations in addition to other metrics.
 
-In this research, we will use tool-based software metrics when we evaluate software quality.
-In addition, we will use compilability and on the completion of this research, plan to use categories and category distributions of commits as a novel set of software quality metrics.
-
+In this research, we analyze software quality using tool-based metrics and compilability and will create a new metric showing the category distribution of commit purposes.
+%we will use tool-based software metrics and compilability when we evaluate software quality.
+%Furthermore, when we finalize this research, the categories and category-distributions of commits will also be metrics to evaluate software quality. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Outline of This Research White Paper}
-In this white paper, we evaluate previous work on close research areas of this research: commit message, code parttern and software quality representation and propose a purpose-oriented categorizational analysis approach on commits and software quality.
+In this white paper, we evaluate previous work on related areas of this research, such as commit messages, code patterns and software quality representation, as well as propose a purpose-oriented categorizational analysis approach to analyze commits and software quality.
 
-Our goal is to construct a reasonable categorization for commits, based on their purposes, investigate its relation with software quality and consequently find a way to improve the software quality.
+Our goal is to construct a reasonable categorization for commits based on their purposes, and investigate their relations to software quality and consequently find a way to improve them.
 
-The sections of this white paper is organized as following:
+The sections of this white paper are organized as follows:
 \begin{itemize}
-    \item Section \ref{sec:data} introduce our current data set, which we will use for the research, following by a plan of what we want to collect in addition to current set to support further analysis.
-    \item Section \ref{sec:type} discusses previous works in categorizing commits, either by their purposes, sizes and other criteria and how we can apply them to analyze impact on software quality. Furthermore, it also discusses the critical issues in the process of categorization that need extra effort to deal with.
-    \item Section \ref{sec:message} discusses previous works in analyzing, extracting information, and auto-generation of commit messages and how we can use commit message to help categorization and analyzing quality metrics.
-    \item Section \ref{sec:pattern} discusses how we can use code changes to help categorize commits.
-    \item Section \ref{sec:quality} discusses our way of assessing software quality, including tool-based analysis and extra metrics.
-    \item Section \ref{sec:goal} discusses the plan and final goals of this research and how it can be applied practically to serve software development for a better quality.
+    \item Section \ref{sec:data} introduces our current data set and additional data we plan to collect for current projects and from new projects.
+    %\item Section \ref{sec:data} introduces our current data set and what we want to collect beyond it to support further analysis.
+    %specify "what" here
+    \item Section \ref{sec:type} discusses previous works on categorizing commits, either by their purpose, size or other criteria and how we can apply them to analyzing how different types of commits impact software quality. Furthermore, the section also discusses the critical issues in the process of categorization that need extra effort to deal with.
+    \item Section \ref{sec:message} discusses previous works in analyzing and extracting information from commit messages, auto-generating them, as well as using commit messages to help categorize commits and analyzing software quality.
+    \item Section \ref{sec:pattern} illustrates how we can use code changes to help categorize commits.
+    \item Section \ref{sec:quality} explains our way of assessing software quality, including tool-based analysis and additional metrics.
+    \item Section \ref{sec:goal} presents the plan and final goals of this research and how this research will serve to improve software quality across the field.
     \item Section \ref{sec:conclusion} concludes the white paper.
-    \item Section \ref{sec:threats} listed potential threats of validity of this research plan.
+    \item Section \ref{sec:threats} lists potential threats to the validity of this research plan.
 \end{itemize}
 
 

@@ -1,25 +1,27 @@
 \section{Commit Change Types}
 \label{sec:type}
 
-The core of this research is purpose-oriented commit analysis. Thus, the first and critical problem we plan to address is the establishment of a generally applicable categorization of commits. 
-In this section, we present our survey results in this problem domain and how we plan to create our own categorization, what we have done to achieve it and what is left to be done.
+The core of this research is purpose-oriented commit analysis. Thus, the first and most critical problem we plan to address is the establishment of a generally applicable categorization of commits. 
+In this section, we present related works in this problem domain, how we plan to create our own categorization, what we have done to achieve it and what is left to be done.
 
-\subsection{Previous Taxonomies for Commits}
-Previous works primarily characterize commits based on metadata, including commit size, commit message, which is the comment the developer leave before pushing the changes to an online repository. 
+\subsection{Taxonomies for Commits}
+Previous works primarily characterize commits based on metadata, including commit size and messages, which are the comments that developers write before pushing the changes to an online repository. 
 
-Purushothaman et al. \cite{purushothaman2004towards} propose a categorization based on whether a commit add or delete lines of code.
+\comment{Some transitions between sentences.}
+Purushothaman et al. \cite{purushothaman2004towards} propose a categorization based on whether a commit adds or deletes lines of code.
 Alali et al.\cite{alali_2008} examine nine open-source software systems to and characterize commit properties by size --- lines of code, number of code blocks, and file count --- as well as extracted terms from commit messages.
 Arafat et al. \cite{arafat2009commit} and Hattori et al. \cite{hattori2008nature} also analyze commits categorized by their sizes. 
-Dragan et al. \cite{Dragan} perform categorization over commit code, stereotyping added and removed methods to form a descriptor for commit change.
+Dragan et al. \cite{Dragan} perform categorization over commit code, stereotyping added and removed methods to form a descriptor for commit changes.
 There are also studies which adopt the categories of maintenance tasks, thus the change types, to categorize the commits. 
 We will also categorize commits in this way and conduct our analysis.
 The reason is that a previous study \cite{qrs2020} has shown there is a statistically significant relation between the change types and the software quality by analyzing the compilability.
 
 \subsection{Purpose-oriented Categorization}
-In this research, we will conduct a purpose-oriented categorization on commits based on previously-established categorizations for maintenance tasks.
-Swanson \cite{Swanson} introduce maintenance task categories, by dividing the work from developers into adaptive, corrective and perfective.
-Purushothaman et al. \cite{purushothaman2004towards} add one more category ``inspection'' based in addition to previous three.
+In this research, we will conduct a purpose-oriented categorization for commits based on previously-established categorizations for maintenance tasks.
+Swanson \cite{Swanson} introduced maintenance task categories by dividing the work from developers into adaptive, corrective, and perfective.
+Purushothaman et al. \cite{purushothaman2004towards} add one more category, ``inspection,'' based in addition to previous three.
 
+\comment{transition}
 Wang et al. propose a categorization, shown in Table \ref{tab:wang}, based on the purpose of commits.
 
 Kaur et al. \cite{kaur_2018} propose a classifier for labeling commit type --- bug repair, feature addition, and general --- based on commit messages.
@@ -49,7 +51,7 @@ However, commit message alone is not enough to effectively categorize commits. W
     \hline
     External Change  & \multicolumn{1}{p{17.5em}|}{The change caused by the change of external dependent library or interacting system.} \\
     \hline
-    Non Functional  & \multicolumn{1}{p{17.5em}|}{Other kinds of code changes that do not change the code functionalities, documentation change, comment change, or fix warnings.} \\
+    Non-functional  & \multicolumn{1}{p{17.5em}|}{Other kinds of code changes that do not change the code functionalities, documentation change, comment change, or fix warnings.} \\
     \hline
     Bug Fix  & \multicolumn{1}{p{17.5em}|}{Fix a bug. It includes all kinds of code changes that are made for the purpose of fixing a bug.} \\
     \hline
@@ -131,73 +133,74 @@ They further map the categories to the taxonomy of Mauczka et al.\cite{Mauczka},
   \label{tab:categorization}%
 \end{table}%
 
-In our previous study, to analyze the difference in purpose between breakers and neutrals, we need an accurate categorization for commits.
-Although we leverage Hindle's categorization, it was originally designed for usage only on large commits.
-Several change types such as Maintenance, Bug Fix, Debug and Refactoring were too broadly defined when applied to smaller commits, and at times needed to be accompanied by other categories to fully classify the commit change.
+In our previous study, to analyze the difference in purpose between breakers and neutrals, we needed an accurate categorization for commits.
+Although we leveraged Hindle's categorization, it was originally designed for usage only on large commits.
+Several change types, such as maintenance, bug fix, debug, and refactoring were too broadly defined when applied to smaller commits, and at times needed to be accompanied by other categories to accurately classify the commit change.
 
 Our analysis leads to a refinement of Hindle's categories, and the identification of the commits that warrant defining new categories for comprehensive classification.
-These modifications result in variations in category frequency from those found by Hindle et al. \cite{Hindle_cate}. This indicates, in part, significant changes in category definitions. For example, out of the 2000 commits that they analyzed, 2\% were tagged as maintenance while in our analysis it's more than 40\%.
+These modifications result in variations in category frequency from those found by Hindle et al. \cite{Hindle_cate}. This indicates, in part, significant changes in category definitions. For example, out of the 2000 commits that they analyzed, 2\% were tagged as \textit{maintenance} while in our analysis it is more than 40\%.
 This result is surprising, as other studies  \cite{dodaro2015government,redman2008weapon,koskinen2009software} report that 75\% of software development budgets are dedicated to maintenance. Another contributing factor for the variation in category frequency is our inclusion of small commits. Along with the new taxonomy, we provide results that describe the relationship between commit size and purpose.
 
 Table \ref{tab:categorization} shows the refined taxonomy.
 Specifications for types are as follows:
 
-\textbf{Bug Fix:} In small commits, the lack of descriptive code makes it hard to differentiate between Bug Fix and Maintenance categorization. 
+\textbf{Bug Fix:} In small commits, the lack of descriptive code makes it hard to differentiate between \textit{bug fix} and \textit{maintenance}. 
 As a result, we have to rely on commit messages and project change logs. 
-For example, if a commit message mentions fixing an existing issue, it should be tagged a Bug Fix. We also thoroughly examine previous software revisions, to see if the commit is added in response to flaws in recent code.
-While we take these steps to better identify Bug Fixes, some commits are still too vague to be clearly tagged Maintenance or Bug Fix. 
+For example, if a commit message mentions fixing an existing issue, it should be tagged a \textit{bug fix}. We also thoroughly examine previous software revisions to see if the commit is added in response to flaws in recent code.
+While we take these steps to better identify bug fixes, some commits are still too vague to be clearly tagged \textit{maintenance} or \textit{bug fix}. 
 Further improvement and definition of rules are needed to make the tagging more definitive on small commits.
 
 \textbf{Feature Add:} We found that Hindle's definition of a Feature Add is under-specified for smaller commits.
 This may be because new features are easily identifiable in larger commits via the commit message, whereas in small code changes, new features can be a single non-utility function or method. We include this in our refined definition of Feature Add.
 
 \textbf{Maintenance:} This is the most under-specified type in the original taxonomy.
-Cross validation indicates more than half of the commits with inconsistent tags are with Maintenance. 
-Thus, we consult with Hindle et al. regarding this tag.
-According to our discussion, this should be better translated to ``minor perfective changes'' which is different from the maintenance tasks we generally use.
-Since the original definition can cause confusion due to little specification, we define it as function \& efficiency improvements, additions of utility functions, or minor modifications without new methods or error corrections.
+Cross validation indicates more than half of the commits with inconsistent tags are tagged \textit{maintenance}. 
+Thus, we consulted with Hindle regarding this tag and decided it should be translated as ``minor perfective changes'' which is different from the common definition of maintenance.
+\comment{Rethink about how to write this part. To make the definition clear. Mention different people understand this tag in different ways, causing this inconsistency.}
+
+Since the original definition can was unclear \comment{Some more details of why it is unclear}, we define it as function \& efficiency improvements, additions of utility functions, or minor modifications without new methods or error corrections.
 For example, memory cleaning is tagged as Maintenance because it is a performance improvement. 
 
 
 \textbf{Refactoring:} 
-We specify Refactoring as relocation, restructuring of code without altering how the code functions, such as extracting code to form a new function, relocating code hunks within or across files, or other changes to reduce code redundancies.
+We define \textit{refactoring} as relocating or restructuring of code without altering how the code functions, such as extracting code to form a new function, relocating code hunks within or across files, or other changes to reduce code redundancies.
 They do not change functionality or efficiency.
 
 Note that by our definition, breakers and neutrals can not be merge or orphan commits, as we study the impact of a commit by comparing two revisions: the one it changes and the one it produces.
-As a result, there are no commits in the Branch and Initialization categories.
+As a result, we did not have commits that were assigned the tags \textit{branch} or \textit{initialization}.
 
 
 \subsubsection{Independent Change}
 
 \begin{figure}[htbp]
 \centerline{\includegraphics[scale=0.5]{figures/independent_change.pdf}}
-\caption{Explanation For Independent Change}
+\caption{Explanation For Independent Changes}
 \label{fig:Relationship}
 \end{figure}
 
 To improve our tagging, we first note that the original change type definitions overlap. For example, a documentation change may occur as part of a feature add commit. This increases tagging ambiguity and complexity, which we solve by introducing the concept of an \textit{independent change}.
 
-We call a change an \textit{independent change} when it is not a part of other changes.
-Fig. \ref{fig:Relationship} explains this concept. It illustrates a commit with multiple changes, in which a new feature contains three sub-changes.
+A change is independent if it is not a part of other changes.
+Fig. \ref{fig:Relationship} explains this concept. The figure illustrates a commit with multiple changes in which a new feature contains three sub-changes.
 Each block represents a code change. 
-In the figure, a new feature change contains debugging code, documentation 1 for the functionality of the feature, documentation 2 for the debugging code, an irrelevant documentation 3, and an irrelevant maintenance change. 
-In this case, the debugging code and documentation 1 and 2 are sub-changes to the new feature. 
+In the figure, a new feature change contains debugging code, Documentation 1 for the functionality of the feature, Documentation 2 for the debugging code, an irrelevant Documentation 3, and an irrelevant maintenance change. 
+In this case, the debugging code and Documentation 1 and 2 are sub-changes to the new feature. 
 As a result, we only assign a ``Feature Add'' tag to the new feature instead of assigning tags to all sub-changes. 
-As documentation 3 and maintenance are both unrelated to the new feature, they will be assigned Documentation and Maintenance tags.
-The new feature, documentation 3, and maintenance groups are independent changes, with the associated three independent tags forming a label the commit. 
-With the introduction of independent change types, we reduce the ambiguity in the initial taxonomy which results in fewer cross-validation errors and improved tagging efficiency.
+As Documentation 3 and maintenance are both unrelated to the new feature, they will be assigned \textit{documentation} and \textit{maintenance}.
+The new feature, Documentation 3, and maintenance groups are independent changes with the associated three independent tags forming a label the commit. 
+With the introduction of independent change types, we reduced the ambiguity in the initial taxonomy, resolved cross-validation errors, and improved tagging efficiency.
 
 \subsubsection{Single-tagged Commit And Multi-tagged Commit}
 
-When reviewing manual tagging, we analyze commits with different numbers of tags separately. 
-The commits are divided into two groups: \textit{single-tagged} and \textit{multi-tagged}. \textit{Single-tagged} commits contain only one independent change, and \textit{multi-tagged} more than one. 
+When reviewing manual tagging, we analyze commits with different numbers of tags separately by dividing 
+them into two groups: \textit{single-tagged} and \textit{multi-tagged}. \textit{Single-tagged} commits contain only one independent change, and \textit{multi-tagged} more than one. 
 
-Fig. \ref{fig: cat_distribution} shows the tag-distributions of single and multi-tagged commits by commit purpose.
+Fig. \ref{fig: cat_distribution} shows the tag-distributions of single and multi-tagged commits by purpose.
 In the figure, black bars represent the rates when a certain commit is tagged a single category while gray bars are used to denote multi-tagged. For example, approximately 80\% commits are tagged Testing and more than 95\% of them are multi-tagged commits.
 As shown in the figure, Build, Feature Add, Indentation, Refactoring, Testing arise more frequently in multi-tagged commits, indicating these tags tend to appear together with other tags. 
 More than 95\% of testing commits have multiple tags, which is consistent with development practices of including the testing code along with most changes.
 Documentation is more frequent in single-tagged commits, indicating that many documentation changes are added independently.
-As the change of documentation is usually used to explain changed code, this may also imply that contributors often forget to add enough documentation when they accomplish a commit.
+As the change of documentation is usually used to explain changed code, this may also imply that contributors often forget to add enough documentation when they make a change.
 For other categories there are no apparent differences between single-tagged and multi-tagged commits.
 In addition to comparing these two sets, we also study how many tags each commit has and its distribution. 
 \begin{figure*}[htbp]
@@ -211,15 +214,15 @@ Recall that we call a commit with multiple independent changes \textit{multi-tag
 Almost 50\% of our analyzed commits are multi-tagged.
 We summarize the number of tags for each commit independently for the breaker and the neutral set, as shown in Fig. \ref{fig:num_tasks_fig}. 
 The figure shows the distributions of commits with different numbers of tags in the breaker{}s or neutral{}s. 
-Each bar stands for the ratio of presence of commits with certain number of tags.
+
 
 For example, 55\% of neutral{}s only have one tag. 
-The curves are Kernel Density Estimations of these two distributions that are long tail distributions. 
+The curves are Kernel Density Estimations of these two distributions, indicating they are long tail distributions. 
 The number of instances decreases as the number of tags increases.
-As for its relation with compilability, we can see a neutral is more likely to have a small number of tags while a breaker has a relatively large one. 
+As for its relation with compilability, we can see a neutral is more likely to have a few tags than a breaker. 
 We also use the Kernel Density Estimation (KDE) to estimate these two distributions. 
-The distribution density curve of neutral{}s is sharper than breaker{}s which means the proportion of commits decreases more sharply in the neutral{}s than in the breaker{}s with increase of the number of tags. 
-We can interpret it as a commit is more likely to break its compilability when it has more tags.
+The distribution density curve of neutral{}s is sharper than the breaker{}s' which means the proportion of commits decreases more sharply in the neutral{}s than in the breaker{}s with increase of the number of tags. 
+We interpret it as that a commit is more likely to break its compilability when it has more tags.
 
 \begin{figure*}[htbp]
 \centerline{\includegraphics[scale=0.6]{figures/num_tasks_break_rate.pdf}}
@@ -230,9 +233,9 @@ We can interpret it as a commit is more likely to break its compilability when i
 
 
 \subsubsection{Tag Distribution}
-We analyze the differences between the breaker set and the neutral set in terms of tag distributions.
+We analyze the differences between the breakers and the neutrals in terms of tag distributions.
 Recall that we call a commit a breaker if it breaks the compilabilty of a compilable revision.
-If a commit changes an uncompilable revision and produce another uncompilable revision we do not consider it as a breaker.
+If a commit changes an uncompilable revision and produces another uncompilable revision we do not consider it as a breaker.
 We also call a commit a neutral if it changes a compilable revision and produces another compilable revision.
 If a commit fixes compile errors of an uncompilable commit we do not consider it as a neutral.
 
@@ -246,8 +249,8 @@ Fig. \ref{fig:breaker_neutral_distribution} shows the tag-distributions of break
 Each bar stands for the occurrence rates of that category. 
 For example, around 40\% of breaker{}s and neutral{}s are tagged Testing. 
 Since a commit could have multiple independent changes, values for one color may add up to more than 100\%.
-The presence ratios for Bug Fix, Documentation, is higher in the neutrals while Feature Add, Build, Refactoring, Clean up and Maintenance is higher in breaker{}s.
-The breaker{}s have 1.90 tags on average while neutral{}s have 1.56 on average.
+The presence ratios for \textit{bug fix} and \textit{documentation} are higher in the neutrals while the ratios of \textit{feature add}, \textit{build}, \textit{refactoring}, \textit{clean up} and \textit{maintenance} are higher in breaker{}s.
+The breaker{}s have 1.90 tags on average while neutral{}s have 1.56.
 
 
 \begin{table}[htbp]
@@ -313,21 +316,22 @@ The breaker{}s have 1.90 tags on average while neutral{}s have 1.56 on average.
     \label{tab:breaker_neutral}%
   \end{table}%
 
-Again, we perform odd ratio test (the Fisher's Exact Test) to study the correlation between categories and compilability. 
-According to the test result shown in Table \ref{tab:breaker_neutral}, we found that Bug Fix, Build, Documentation, Feature Add, Maintenance, Module Move, Module Remove, Refactoring, Rename have significant differences between breaker{}s and neutral{}s, which is consistent with the results of Fig.\ref{fig:breaker_neutral_distribution}.
+Again, we perform odds ratio tests (the Fisher's Exact Tests) to study the correlation between categories and compilability. 
+According to the test results shown in Table \ref{tab:breaker_neutral}, we found that \textit{bug fix}, \textit{build}, \textit{documentation}, \textit{feature add}, \textit{maintenance}, \textit{module move}, \textit{module remove}, \textit{refactoring}, and \textit{rename} have significant differences between breaker{}s and neutral{}s, which are consistent with the results of Fig.\ref{fig:breaker_neutral_distribution}.
 
 \subsubsection{Small And Large Commits}
 
 We also analyze the relation between uncompilability and whether a commit is large or small. 
-We draw boxplot of changed Lines of Code (LOC) for breaker set and neutral set which is shown in Fig. \ref{fig: commit_LOC}.
+We draw a boxplot of changed Lines of Code (LOC) for breaker set and neutral set which is shown in Fig. \ref{fig: commit_LOC}.
 Fig. \ref{fig: commit_LOC}(a) shows the distributions of neutrals and breakers respectively. 
 (b) shows distributions of commits with different number of tags respectively. 
-In boxplot, each box represents inter-quartile range (IQR) of data points, the range of major part of data and circle represents outlier of data points which are outside 1.5 IQR.
-As shown in Fig. \ref{fig: commit_LOC}(a), the distribution of breaker{}s is shifted upward from the distribution of neutral{}s and it means breaker{}s tend to have larger changed LOC than neutral{}s. 
-This indicates larger commits are more likely to result in compilation breach.
+In boxplot, each box represents the inter-quartile range (IQR) of data points, the range of major part of data.
+The circles represent outlier of data points which are outside 1.5 IQR.
+As shown in Fig. \ref{fig: commit_LOC}(a), the distribution of breaker{}s shifts upward from the distribution of neutral{}s and it means breaker{}s tend to have larger changed LOC than neutral{}s. 
+This indicates larger commits are more likely to result in compilation breaches.
 
-We also analyze the distribution of changed LOC for commits which contains different number of tags as shown in Fig. \ref{fig: commit_LOC}(b).
-The result shows that if a commit contains more tags, it tends to have more lines of code changed. 
+We also analyze the distribution of changed LOC (Lines of Code) for commits which contains different numbers of tags as shown in Fig. \ref{fig: commit_LOC}(b).
+The results show that if a commit contains more tags, it tends to have more lines of code changed. 
 \begin{figure*}[htbp]
 \centerline{\includegraphics[scale=0.5]{figures/commit_size.pdf}}
 \caption{Commits Distribution Over Lines of Code.}

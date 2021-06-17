@@ -7,11 +7,10 @@ In this section, we will introduce our current data set and our plan to extend t
 \subsection{Current Data Set}
 \label{sec:data}
 
-The initial data set is introduced in previous studies \cite{pooyan_esem}, \cite{pooyan_qrs}, which provides compilability and software quality metrics across 68 open-source Java projects owned by Apache, Google, and Netflix with over 130000 commits, around 30000 out of which are considered as impactful commits. 
+The initial data set was introduced in previous studies \cite{pooyan_esem}, \cite{pooyan_qrs}. 
+It includes data from 68 projects of Apache, Google, and Netflix and provides compilability information as well as software quality metrics of over 130000 commits, around 30000 out of which are considered as impactful commits, which are commits that developers change code in their core modules.
 
-An impactful commit is a commit that have changes in their core module.
-
-Following these studies, we manually tag 314 uncompilable commits and 1600 compilable commits, each of which are at least cross-validated by two different researchers.
+In addition, we manually tag 314 uncompilable commits and 1600 compilable commits, each of which are cross-validated by at least two different researchers.
 
 \begin{figure}[htbp]
     \centerline{\includegraphics[scale=0.3]{figures/terminology.pdf}}
@@ -20,7 +19,8 @@ Following these studies, we manually tag 314 uncompilable commits and 1600 compi
     \end{figure}
 
 We use the following terminology, as shown in Fig. \ref{fig:terminology}, to categorize commits based on their impact on compilability. 
-As we consider one of the quality aspects is compilability, we also define terms regarding it.
+As we consider one of the quality aspects is compilability, we also define all relevant terms.
+%terms regarding it.
 
 \begin{itemize}
 \item A core module is a module that contains the majority of the source code, such as the main modules in most Apache library systems.
@@ -28,7 +28,7 @@ As we consider one of the quality aspects is compilability, we also define terms
 An impactful commit is \textit{broken} if it creates an uncompilable revision; otherwise, it is \textit{solid}.
 \item A broken commit is a \textit{breaker} if it breaks the compilability of its solid parent; otherwise, it is a \textit{carrier}.
 \item A solid commit is a \textit{fixer} if it fixes its broken parent; otherwise it is \textit{neutral}.
-Fig. \ref{fig:sequence} shows an example of a commit sequence with these four types of impactful commit.
+Fig. \ref{fig:sequence} shows an example of a commit sequence with these four types of impactful commits.
 \end{itemize}
 
 \begin{figure}[htbp]
@@ -37,39 +37,38 @@ Fig. \ref{fig:sequence} shows an example of a commit sequence with these four ty
     \label{fig:sequence}
     \end{figure}
 
-We do not categorize orphan or merge commits into breaker, carrier, fixer, or neutral as their impact is not identifiable by comparing two software revisions (i.e., before and after).
+We do not categorize orphan or merge commits into the aforementioned categories their impact is not identifiable by comparing two software revisions (i.e., before and after).
 
 For selecting subject systems, we retrieve all Java projects owned by Google and Netflix from GitHub.
-We select a system only if it 1) requires Ant, Maven, or Gradle for compilation and is not an Android, a Bazel, or an Eclipse project, 2) does not require manual installation of other tools (e.g., Protoc) for compilation, 3) is an official product of the organization, and 4) has a core module containing a substantial amount of code.
-We target the core module and identify impactfuls in each system and exclude those with fewer than 100 distinct revisions.
+We select a system only if it 1) requires Ant, Maven, or Gradle for compilation and is not an Android, a Bazel, or an Eclipse project, 2) does not require manual installation of other tools (e.g., Protoc) for compilation, 3) is an official product of the organization, and 4) has a core module which contains a substantial amount of code.
+We target the core module and identify ``impactfuls'' in each system and exclude those with fewer than 100 distinct revisions.
 For selecting Apache subject systems, we use the same criteria as Netflix and Google, except that we only consider subject systems with fewer than 3000 commits by April 2017.
 
-To develop the commit purpose taxonomy, we analyze 100 commits, using both the code and commit message in deriving the categorization. We consult with Hindle et al. to clarify category definitions, which help to determine the categories included in our final taxonomy. 
+To develop the commit purpose taxonomy, we analyze 100 commits, using both the code and commit message in deriving the categorization. We consult with Hindle et al. to clarify category definitions and determine the categories included in our final taxonomy. 
 In order to apply this taxonomy to small commits, we create further refinements of the definitions for four kinds of tasks. 
 
-We use the resulting categorization taxonomy to tag our dataset of 914 commits. Each commit is labelled and cross-validated by multiple individuals. 
+We use the resulting taxonomy to tag our dataset of 914 commits. Each commit is labelled and cross-validated by multiple individuals. 
 Initial inconsistencies in tagging arise from ambiguities in the original taxonomy. 
 To resolve these ambiguities, we study each inconsistent tag, identify the source of confusion and further refine the taxonomy definitions. 
 The tag definitions are now more narrow in scope, and overlapping meaning between category definitions is reduced. 
 This methodology ensures that our taxonomy can be applied consistently across varied tagging interpretations. 
 
-We also define a threshold for identifying commit size, and use this to label each commit -- \textit{large} or \textit{small}. 
-Some related works have introduced thresholds to differentiate between large and small commits; however, our dataset exhibits a narrower range in commit size. 
+We also define a threshold for identifying commit size, and use this to label each commit.
+Some related works have introduced thresholds to differentiate between large and small commits; however, our dataset exhibits a more narrow range in commit size. 
 The average commit size is also reduced due to our focus on the changes within a commit, as opposed to cumulative commit size. 
-Thus, based on our dataset, we create a new threshold which defines commit size as the sum of added and deleted lines of code. The 314 uncompilable commits were split into two parts, with the smallest 157 commits labeled \textit{small}, and the remaining 157 commits labeled \textit{large}. 
+Thus, based on our dataset, we create a new threshold which defines commit size as the sum of added and deleted lines of code. The 314 uncompilable commits were split into two parts, with the smallest 157 commits labeled \textit{small}, and the remaining 157 labeled \textit{large}. 
 The resulting threshold -- 184 lines of code -- is used to label the 600 compilable commits.
-This threshold is based on the distribution of uncompilable commits in order to motivate discussions on the relative sizes and categorization of uncompilable commits. The final dataset contains 157 each of large and small uncompilable commits, and 138 \& 462 large and small compilable commits, resp.
+This threshold is based on the distribution of uncompilable commits in order to motivate discussion on the relative size and categorization of uncompilable commits. The final dataset contains 157 each of large and small uncompilable commits, and 138 \& 462 large and small compilable commits, respectively.
 
-To analyze software quality evolution over uncompilable commits in relation to the quality of compilable commits, we examine metrics on code complexity, maintainability, and security, provided by SonarQube\footnote{https://www.sonarqube.org/} and PMD\footnote{https://pmd.github.io/} and plan to utilize CAST\footnote{https://www.castsoftware.com/}. As uncompilable commits cannot be directly assessed by dynamic software quality analysis, we measure the overall quality change in the compilable commits before and after uncompilable sequences, extrapolating to determine the individual quality of each commit. 
+To analyze software quality evolution over uncompilable and compilable commits, we examine metrics on code complexity, maintainability, and security, provided by SonarQube\footnote{https://www.sonarqube.org/} and PMD\footnote{https://pmd.github.io/} and plan to utilize CAST\footnote{https://www.castsoftware.com/}. As uncompilable commits cannot be directly assessed by dynamic software quality analysis, we measure the overall quality change in the compilable commits before and after uncompilable sequences, extrapolating to determine the individual quality of each commit. 
 
 
 \subsection{The Plan to Extend Current Data Set}
 
-Choosing the data set is a critical issue for a software repository mining research, since if the chosen data set is not representative, the conclusions won't be generally applicable.
-The intention of extending our current data set is to avoid this situation.
-We identify limitations of our current data set and how we plan to extend it as following:
+Choosing the data set is a critical issue for software repository mining research since, if the chosen data set is not representative, the conclusions will not be generally applicable.
+To avoid this situation, we identify limitations of our current data set and how we plan to extend it as follows:
 \begin{itemize}
-    \item The current data set only contains projects from three large corporations, which are from Google, Netflix and Apache. We plan to collect data from other corporations with the expectation of obtaining software data from different corporation conventions.
-    \item We focus on impactful commits in current data set. To resolve this limitation, we plan to investigate non-impactful commits and evaluate whether it is necessary to extend this research to those commits.
+    \item The current data set only contains projects from three large corporations, Google, Netflix and Apache. We plan to collect data from other corporations with different coding conventions.
+    \item We focus on impactful commits in the current data set. To resolve this limitation, we plan to investigate non-impactful commits and evaluate whether it is necessary to extend this research to those commits.
 \end{itemize}
 
