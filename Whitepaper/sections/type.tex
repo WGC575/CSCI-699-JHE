@@ -339,12 +339,13 @@ The results show that if a commit contains more tags, it tends to have more line
 \end{figure*}
 
 \subsection{Automated Tagging}
-An important application, for which we establish the categorization, is to automatically tagging the commits based on their changes types.
-Only if we succeed in tagging the commits efficiently and accurately will we be able to provide potential risk evaluations for those commits. 
-In this way, it will be possible to integrate our work to existing software development tools.
-
-Previous studies create prediction models to achieve this based on their own categorizations.
-
+An important application for which we establish the categorization is to automatically tag the commits based on their changes types.
+%when using "which", only apply commas when the subject is clear enough
+Only if we succeed in tagging the commits efficiently and accurately will we be able to provide potential risk evaluations for them. 
+In this way, it will be possible to integrate our work into existing software development tools.
+%integrate into
+Previous studies have created prediction models to achieve this based on their own categorizations.
+\comment{Add some transitions, and explain more about how we should care about these works.}
 Hindle et al. \cite{Hindle_auto} build their model based on commit messages and author identities.
 Yan et al. \cite{yan2016automatically} present a discriminative Probability Latent Semantic Analysis(DPLSA) model for automated categorizing. 
 Levin et al. \cite{levin2017boosting} introduce their novel method to predict three types of maintenance tasks. 
@@ -353,27 +354,27 @@ Honel et al. \cite{honel2019importance} achieve a high accuracy by adding code d
 Dos et al. \cite{dos2020commit} combine natrual language processing techniques to help train their machine learning model.
 Ghadhab et al. \cite{ghadhab2021augmenting} apply deep neutral network classifier and BERT model to predict the categories.
 
-These studies, while achieving high accuracy, adopt simplified categorizations for their prediction model. 
-For example, Levin's model use three categories: ``adaptive'', ``corrective'', and ``perfective''.
+Their models achieve high accuracy but the categorizations they adopted are too simplistic to clearly characterize all types of commits. 
+%simple & simplistic
+For example, Levin's model uses only three categories: ``adaptive,'' ``corrective,'' and ``perfective'' while we have 27.
 
 As we want to propose our own more complicated categorization, it will be necessary to construct a new model for automated categorization.
 
 \subsection{Research Challenges in Categorizing Commits}
 
 Work has been done to categorize commits in different ways and apply the categorizations to train prediction models. 
-However, there is a problem left unresolved in categorization.
-The major one is the ambiguity of the concepts.
+However, there are problems that remain unresolved in categorizing commits.
+The major one is the ambiguity of the terminology.
 
-For example, the term ``bug'', used in some of the categorizations we mentioned, was first used by Grace Hopper, used to describe a failure in an early electromechanical computer back in 1946. 
-Later, the term ``bug'', is widely used in software engineering, used to describe an error, flaw or fault in a computer program or system that leads to an incorrect or unexpected result, or to behave in unintended ways.
-The reason why it is a failure is that the concept itself is vague and sometimes misleading. 
-It aims at a clear boundary but ends up without getting one. 
+For example, the term ``bug,'' used in some of the categorizations we mentioned, was first coined by Grace Hopper, used to describe a failure in an early electromechanical computer back in 1946. 
+%(term) be coined
+Later, the term ``bug'' began to be used in software engineering to describe an error, flaw or fault in a computer program or system that leads to an incorrect or unexpected result, or to behave in unintended ways.
+While this term aims to clarify, it often leads to further confusion. 
 The word ``bug'' may be divorced from a sense that a human being caused the problem, and instead implies that the defect arose on its own. 
-Sometimes, it is better to describe a ``mistake'' in software more accurately using other terms in software mistake metamorphism to avoid ambiguity.
+Sometimes, it is better to describe a mistake in software more accurately using other terms in software mistake metamorphism to avoid ambiguity.
+\comment{Rethink about above two sentences.}
 
-This problem also happen in other categorizations, like ``maintenance'', used in Hindle's categorization, which is the most ambiguous one even for manual classification.
+This problem also arises in other categories, such as the ``maintenance'' in Hindle's categorization. In our cross validation, the term ``maintenance'' caused the most confusion.
 
-Thus, as the core of our research, we plan to resolve this problem by create a more fine-grained categorization. 
-Instead of relying majorly on commit messages, we will characterize code changes and use them as major source for categorization, while also using commit messages and meta-data as supporting materials.
-
-After the creation of our categorization, it will be necessary to investigate how to automate classification in a novel way, since we have a new and more fine-grained categorization.
+Thus, the core of this research is a more fine-grained and less ambiguous categorization. 
+Instead of relying majorly on commit messages, we will characterize code changes and use them as the major source for categorization, while also using commit messages and meta-data as supporting materials.
